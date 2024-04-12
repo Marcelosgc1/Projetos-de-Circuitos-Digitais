@@ -1,0 +1,10 @@
+module alarm(H, M, L)
+	input H, M, L;
+	
+	error error_inst
+	(
+		.H(H),
+		.M(M),
+		.L(L),
+	
+	)

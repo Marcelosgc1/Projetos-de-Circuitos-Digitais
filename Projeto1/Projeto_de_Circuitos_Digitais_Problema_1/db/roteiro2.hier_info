@@ -1,0 +1,90 @@
+|main
+high => high.IN3
+middle => middle.IN4
+low => low.IN3
+umidadeDoSolo => umidadeDoSolo.IN1
+umidadeDoAr => umidadeDoAr.IN2
+temperatura => temperatura.IN2
+erro << erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada << valvulaDeEntrada:valvulaDeEntrada_inst.VE
+a << decoder:decoder_inst.a
+b << decoder:decoder_inst.b
+c << decoder:decoder_inst.c
+d << decoder:decoder_inst.d
+e << decoder:decoder_inst.e
+f << decoder:decoder_inst.f
+g << decoder:decoder_inst.g
+digit << decoder:decoder_inst.digit
+
+
+|main|error:error_inst
+H => And0.IN0
+M => And1.IN0
+M => And0.IN1
+L => And1.IN1
+saida <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|alarm:alarm_inst
+L => Or0.IN0
+erro => Or0.IN1
+SaidaAlarme <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|valvulaDeEntrada:valvulaDeEntrada_inst
+erro => Ve.IN0
+H => Ve.IN1
+VE <= Ve.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|authorizedToIrrigate:authorizedToIrrigate_inst
+Al => Inv0.IN0
+Us => Inv0.IN1
+out <= Inv0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sprinkler:sprinkler_inst
+M => And0.IN0
+aut => And1.IN1
+temp => And0.IN1
+Ua => Or0.IN1
+out <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|drip:drip_inst
+M => Or0.IN0
+aut => And0.IN1
+temp => Or0.IN1
+Ua => And0.IN2
+out <= And0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|coder:coder_inst
+L => Or0.IN0
+M => Or1.IN0
+H => Or0.IN1
+H => Or1.IN1
+S0 <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decoder:decoder_inst
+Bit0 => NorB.IN0
+Bit0 => OrE.IN0
+Bit0 => a.DATAIN
+Bit0 => d.DATAIN
+Bit0 => g.DATAIN
+Bit1 => NorB.IN1
+Bit1 => OrE.IN1
+Bit1 => c.DATAIN
+a <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+b <= NorB.DB_MAX_OUTPUT_PORT_TYPE
+c <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
+d <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+e <= OrE.DB_MAX_OUTPUT_PORT_TYPE
+f <= <GND>
+g <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+digit <= <GND>
+
+

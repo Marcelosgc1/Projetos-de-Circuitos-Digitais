@@ -1,0 +1,31 @@
+module(
+input high,
+input middle,
+input low,
+output wire erro, 
+output wire saidaDoAlarme, 
+output wire ValvulaDeEntrada
+);
+
+	error error_inst
+	(
+		.H(high),
+		.M(middle),
+		.L(low),
+		.saida(erro)
+	);
+	
+	alarm alarm_inst
+	(
+		.M(middle),
+		.erro(erro),
+		.SaidaAlarme(saidaDoAlarme)
+	);
+	
+	valvulaDeEntrada valvulaDeEntrada_inst
+	(
+		.H(high),
+		.erro(erro),
+		.VE(ValvulaDeEntrada)
+	);
+	
