@@ -19,7 +19,8 @@ output digit
 );
 	
 	
-	wire Autorizacao, ValvulaDeAspersao, ValvulaDeGotejamento, bit1, bit0;
+	wire Autorizacao, ValvulaDeAspersao, ValvulaDeGotejamento, bit1, bit0, bit2, bit3;
+	wire Ca, Cb, Cc, Cd, Ce, Cf, Cg, Ia, Ib, Ic, Id, Ie, If, Ig;
 	
 	error error_inst
 	(
@@ -83,19 +84,41 @@ output digit
 		(
 			.Bit0(bit0),
 			.Bit1(bit1),
-			.a(a),
-			.b(b),
-			.c(c),
-			.d(d),
-			.e(e),
-			.f(f),
-			.g(g),
+			.a(Ca),
+			.b(Cb),
+			.c(Cc),
+			.d(Cd),
+			.e(Ce),
+			.f(Cf),
+			.g(Cg),
 			.digit(digit)
 		
 		
 		);
 		
+	encoder_irrigation encoderI_inst
+	(
+		.sprinkler(high),
+		.drip(middle),
+		.aut(low),
+		.S0(Bit2),
+		.S1(Bit3)
+	);
 		
+	decoder_irrigation decoderI_inst
+		(
+			.Bit0(bit2),
+			.Bit1(bit3),
+			.a(Ia),
+			.b(Ib),
+			.c(Ic),
+			.d(Id),
+			.e(Ie),
+			.f(If),
+			.g(Ig),
+		
+		
+		);	
 		
 		
 		
