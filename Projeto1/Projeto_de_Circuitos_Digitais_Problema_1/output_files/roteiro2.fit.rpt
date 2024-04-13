@@ -1,5 +1,5 @@
 Fitter report for roteiro2
-Sat Apr 13 01:52:50 2024
+Sat Apr 13 11:28:53 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,16 +17,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. I/O Bank Usage
  10. All Package Pins
  11. Output Pin Default Load For Reported TCO
- 12. Fitter Resource Utilization by Entity
- 13. Delay Chain Summary
- 14. Routing Usage Summary
- 15. LAB Logic Elements
- 16. LAB Signals Sourced
- 17. LAB Signals Sourced Out
- 18. LAB Distinct Inputs
- 19. Fitter Device Options
- 20. Fitter Messages
- 21. Fitter Suppressed Messages
+ 12. I/O Assignment Warnings
+ 13. Fitter Resource Utilization by Entity
+ 14. Delay Chain Summary
+ 15. Routing Usage Summary
+ 16. LAB Logic Elements
+ 17. LAB Signals Sourced
+ 18. LAB Signals Sourced Out
+ 19. LAB Distinct Inputs
+ 20. Fitter Device Options
+ 21. Fitter Messages
+ 22. Fitter Suppressed Messages
 
 
 
@@ -52,7 +53,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sat Apr 13 01:52:50 2024       ;
+; Fitter Status         ; Successful - Sat Apr 13 11:28:53 2024       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; roteiro2                                    ;
 ; Top-level Entity Name ; main                                        ;
@@ -60,7 +61,7 @@ refer to the applicable agreement for further details.
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
 ; Total logic elements  ; 3 / 240 ( 1 % )                             ;
-; Total pins            ; 17 / 80 ( 21 % )                            ;
+; Total pins            ; 18 / 80 ( 23 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -166,7 +167,7 @@ The pin-out file can be found in F:/Users/marce/Documents/CircuitosDigitais/Proj
 ; Total LABs                                  ; 1 / 24 ( 4 % )     ;
 ; Logic elements in carry chains              ; 0                  ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 17 / 80 ( 21 % )   ;
+; I/O pins                                    ; 18 / 80 ( 23 % )   ;
 ;     -- Clock pins                           ; 0 / 4 ( 0 % )      ;
 ;                                             ;                    ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
@@ -177,12 +178,12 @@ The pin-out file can be found in F:/Users/marce/Documents/CircuitosDigitais/Proj
 ; Global signals                              ; 0                  ;
 ;     -- Global clocks                        ; 0 / 4 ( 0 % )      ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 0.7% / 0.4% / 1.0% ;
-; Peak interconnect usage (total/H/V)         ; 0.7% / 0.4% / 1.0% ;
+; Average interconnect usage (total/H/V)      ; 0.5% / 0.4% / 0.7% ;
+; Peak interconnect usage (total/H/V)         ; 0.5% / 0.4% / 0.7% ;
 ; Maximum fan-out                             ; 3                  ;
 ; Highest non-global fan-out                  ; 3                  ;
 ; Total fan-out                               ; 12                 ;
-; Average fan-out                             ; 0.60               ;
+; Average fan-out                             ; 0.57               ;
 +---------------------------------------------+--------------------+
 
 
@@ -194,6 +195,7 @@ The pin-out file can be found in F:/Users/marce/Documents/CircuitosDigitais/Proj
 ; high          ; 38    ; 1        ; 4            ; 0            ; 0           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; low           ; 42    ; 1        ; 5            ; 0            ; 0           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; middle        ; 40    ; 1        ; 5            ; 0            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; seletor       ; 66    ; 2        ; 8            ; 3            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 ; temperatura   ; 35    ; 1        ; 3            ; 0            ; 0           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; umidadeDoAr   ; 33    ; 1        ; 3            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; umidadeDoSolo ; 30    ; 1        ; 3            ; 0            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
@@ -219,14 +221,14 @@ The pin-out file can be found in F:/Users/marce/Documents/CircuitosDigitais/Proj
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
-+-----------------------------------------------------------+
-; I/O Bank Usage                                            ;
-+----------+-----------------+---------------+--------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
-+----------+-----------------+---------------+--------------+
-; 1        ; 8 / 38 ( 21 % ) ; 3.3V          ; --           ;
-; 2        ; 9 / 42 ( 21 % ) ; 3.3V          ; --           ;
-+----------+-----------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 8 / 38 ( 21 % )  ; 3.3V          ; --           ;
+; 2        ; 10 / 42 ( 24 % ) ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -299,7 +301,7 @@ The pin-out file can be found in F:/Users/marce/Documents/CircuitosDigitais/Proj
 ; 63       ;            ;          ; VCCINT           ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 64       ; 51         ; 2        ; GND*             ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 65       ;            ;          ; GNDINT           ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 66       ; 52         ; 2        ; GND*             ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 66       ; 52         ; 2        ; seletor          ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 67       ; 53         ; 2        ; GND*             ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 68       ; 54         ; 2        ; GND*             ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 69       ; 55         ; 2        ; GND*             ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -354,12 +356,21 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
++----------------------------------------+
+; I/O Assignment Warnings                ;
++----------+-----------------------------+
+; Pin Name ; Reason                      ;
++----------+-----------------------------+
+; seletor  ; Missing location assignment ;
++----------+-----------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                             ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                          ; Entity Name      ; Library Name ;
 +---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------+------------------+--------------+
-; |main                                       ; 3 (0)       ; 0            ; 0          ; 17   ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                        ; main             ; work         ;
+; |main                                       ; 3 (0)       ; 0            ; 0          ; 18   ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                        ; main             ; work         ;
 ;    |alarm:alarm_inst|                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|alarm:alarm_inst                       ; alarm            ; work         ;
 ;    |error:error_inst|                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|error:error_inst                       ; error            ; work         ;
 ;    |valvulaDeEntrada:valvulaDeEntrada_inst| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|valvulaDeEntrada:valvulaDeEntrada_inst ; valvulaDeEntrada ; work         ;
@@ -375,6 +386,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; umidadeDoSolo    ; Input    ; (0)           ;
 ; umidadeDoAr      ; Input    ; (0)           ;
 ; temperatura      ; Input    ; (0)           ;
+; seletor          ; Input    ; (0)           ;
 ; erro             ; Output   ; --            ;
 ; saidaDoAlarme    ; Output   ; --            ;
 ; ValvulaDeEntrada ; Output   ; --            ;
@@ -397,7 +409,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------+
 ; Routing Resource Type ; Usage             ;
 +-----------------------+-------------------+
-; C4s                   ; 6 / 784 ( < 1 % ) ;
+; C4s                   ; 5 / 784 ( < 1 % ) ;
 ; Direct links          ; 0 / 888 ( 0 % )   ;
 ; Global clocks         ; 0 / 4 ( 0 % )     ;
 ; LAB clocks            ; 0 / 32 ( 0 % )    ;
@@ -491,6 +503,7 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device EPM570T100C5 is compatible
     Info (176445): Device EPM570T100I5 is compatible
     Info (176445): Device EPM570T100A5 is compatible
+Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 18 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'roteiro2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -505,6 +518,13 @@ Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 1 (unused VREF, 3.3V VCCIO, 1 input, 0 output, 0 bidirectional)
+        Info (176212): I/O standards used: 3.3-V LVTTL.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 8 total pin(s) used --  30 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 9 total pin(s) used --  33 pins available
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
@@ -519,14 +539,14 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/output_files/roteiro2.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5313 megabytes
-    Info: Processing ended: Sat Apr 13 01:52:50 2024
-    Info: Elapsed time: 00:00:06
+Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 5317 megabytes
+    Info: Processing ended: Sat Apr 13 11:28:53 2024
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:02
 
 

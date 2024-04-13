@@ -1,21 +1,22 @@
 |main
-high => high.IN3
-middle => middle.IN4
-low => low.IN3
+high => high.IN4
+middle => middle.IN5
+low => low.IN4
 umidadeDoSolo => umidadeDoSolo.IN1
 umidadeDoAr => umidadeDoAr.IN2
 temperatura => temperatura.IN2
-erro << erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada << valvulaDeEntrada:valvulaDeEntrada_inst.VE
-a << decoder_waterLevel:decoderWL_inst.a
-b << decoder_waterLevel:decoderWL_inst.b
-c << decoder_waterLevel:decoderWL_inst.c
-d << decoder_waterLevel:decoderWL_inst.d
-e << decoder_waterLevel:decoderWL_inst.e
-f << decoder_waterLevel:decoderWL_inst.f
-g << decoder_waterLevel:decoderWL_inst.g
-digit << decoder_waterLevel:decoderWL_inst.digit
+seletor => seletor.IN7
+erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme <= saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada <= valvulaDeEntrada:valvulaDeEntrada_inst.VE
+a <= Mux_2_1:Mux_A.X
+b <= Mux_2_1:Mux_B.X
+c <= Mux_2_1:Mux_C.X
+d <= Mux_2_1:Mux_D.X
+e <= Mux_2_1:Mux_E.X
+f <= Mux_2_1:Mux_F.X
+g <= Mux_2_1:Mux_G.X
+digit <= decoder_waterLevel:decoderWL_inst.digit
 
 
 |main|error:error_inst
@@ -72,19 +73,108 @@ S1 <= Or1.DB_MAX_OUTPUT_PORT_TYPE
 |main|decoder_waterLevel:decoderWL_inst
 Bit0 => OrB.IN0
 Bit0 => AndE.IN0
-Bit0 => a.DATAIN
-Bit0 => d.DATAIN
-Bit0 => g.DATAIN
+Bit0 => c.DATAIN
 Bit1 => OrB.IN1
 Bit1 => AndE.IN1
-Bit1 => c.DATAIN
-a <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+Bit1 => a.DATAIN
+Bit1 => d.DATAIN
+Bit1 => g.DATAIN
+a <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
 b <= OrB.DB_MAX_OUTPUT_PORT_TYPE
-c <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
-d <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+c <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+d <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
 e <= AndE.DB_MAX_OUTPUT_PORT_TYPE
 f <= <GND>
-g <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
+g <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
 digit <= <GND>
+
+
+|main|encoder_irrigation:encoderI_inst
+sprinkler => Or0.IN0
+drip => Or1.IN0
+aut => Or0.IN1
+aut => Or1.IN1
+S0 <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decoder_irrigation:decoderI_inst
+bit0 => XorA.IN0
+bit0 => AndB.IN0
+bit0 => XorC.IN0
+bit0 => XorE.IN0
+bit0 => Xorf.IN0
+bit0 => AndD.IN0
+bit0 => g.DATAIN
+bit1 => XorA.IN1
+bit1 => XorC.IN1
+bit1 => AndD.IN1
+bit1 => XorE.IN1
+bit1 => Xorf.IN1
+bit1 => AndB.IN1
+a <= XorA.DB_MAX_OUTPUT_PORT_TYPE
+b <= AndB.DB_MAX_OUTPUT_PORT_TYPE
+c <= XorC.DB_MAX_OUTPUT_PORT_TYPE
+d <= AndD.DB_MAX_OUTPUT_PORT_TYPE
+e <= XorE.DB_MAX_OUTPUT_PORT_TYPE
+f <= Xorf.DB_MAX_OUTPUT_PORT_TYPE
+g <= bit0.DB_MAX_OUTPUT_PORT_TYPE
+digit <= <GND>
+
+
+|main|Mux_2_1:Mux_A
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mux_2_1:Mux_B
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mux_2_1:Mux_C
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mux_2_1:Mux_D
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mux_2_1:Mux_E
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mux_2_1:Mux_F
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Mux_2_1:Mux_G
+A => And0.IN0
+B => And1.IN0
+S => And1.IN1
+S => And0.IN1
+X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 

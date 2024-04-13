@@ -5,6 +5,7 @@ input low,
 input umidadeDoSolo,
 input umidadeDoAr,
 input temperatura,
+input seletor,
 output wire erro, 
 output wire saidaDoAlarme, 
 output wire ValvulaDeEntrada,
@@ -107,8 +108,8 @@ output digit
 		
 	decoder_irrigation decoderI_inst
 		(
-			.Bit0(bit2),
-			.Bit1(bit3),
+			.bit0(bit2),
+			.bit1(bit3),
 			.a(Ia),
 			.b(Ib),
 			.c(Ic),
@@ -117,10 +118,63 @@ output digit
 			.f(If),
 			.g(Ig),
 		
+		);
 		
-		);	
-		
-		
+	Mux_2_1 Mux_A
+	(
+		.A(Ca),
+		.B(Ia),
+		.S(seletor),
+		.X(a)
+	);
+	
+	Mux_2_1 Mux_B
+	(
+		.A(Cb),
+		.B(Ib),
+		.S(seletor),
+		.X(b)
+	);
+	
+	Mux_2_1 Mux_C
+	(
+		.A(Cc),
+		.B(Ic),
+		.S(seletor),
+		.X(c)
+	);
+
+	Mux_2_1 Mux_D
+	(
+		.A(Cd),
+		.B(Id),
+		.S(seletor),
+		.X(d)
+	);
+	
+	Mux_2_1 Mux_E
+	(
+		.A(Ce),
+		.B(Ie),
+		.S(seletor),
+		.X(e)
+	);
+	
+	Mux_2_1 Mux_F
+	(
+		.A(Cf),
+		.B(If),
+		.S(seletor),
+		.X(f)
+	);
+	
+	Mux_2_1 Mux_G
+	(
+		.A(Cg),
+		.B(Ig),
+		.S(seletor),
+		.X(g)
+	);
 		
 	
 endmodule	
