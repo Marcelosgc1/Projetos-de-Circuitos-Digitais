@@ -1,5 +1,5 @@
 Timing Analyzer report for roteiro2
-Sat Apr 13 11:29:02 2024
+Sat Apr 13 11:59:34 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -144,10 +144,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 9     ; 9    ;
-; Unconstrained Output Ports      ; 3     ; 3    ;
-; Unconstrained Output Port Paths ; 9     ; 9    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 37    ; 37   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 37    ; 37   ;
 +---------------------------------+-------+------+
 
 
@@ -159,6 +159,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; high       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; low        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; middle     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seletor    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -168,7 +169,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port      ; Comment                                                                               ;
 +------------------+---------------------------------------------------------------------------------------+
 ; ValvulaDeEntrada ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; a                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; d                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; e                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; erro             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; f                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; g                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; saidaDoAlarme    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------------+---------------------------------------------------------------------------------------+
 
@@ -181,6 +189,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; high       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; low        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; middle     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seletor    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -190,7 +199,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port      ; Comment                                                                               ;
 +------------------+---------------------------------------------------------------------------------------+
 ; ValvulaDeEntrada ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; a                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; d                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; e                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; erro             ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; f                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; g                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; saidaDoAlarme    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------------+---------------------------------------------------------------------------------------+
 
@@ -201,7 +217,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Apr 13 11:28:59 2024
+    Info: Processing started: Sat Apr 13 11:59:32 2024
 Info: Command: quartus_sta roteiro2 -c roteiro2
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -227,9 +243,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4667 megabytes
-    Info: Processing ended: Sat Apr 13 11:29:02 2024
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Sat Apr 13 11:59:34 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

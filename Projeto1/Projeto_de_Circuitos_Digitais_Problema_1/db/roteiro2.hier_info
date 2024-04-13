@@ -6,17 +6,17 @@ umidadeDoSolo => umidadeDoSolo.IN1
 umidadeDoAr => umidadeDoAr.IN2
 temperatura => temperatura.IN2
 seletor => seletor.IN7
-erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme <= saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada <= valvulaDeEntrada:valvulaDeEntrada_inst.VE
-a <= Mux_2_1:Mux_A.X
-b <= Mux_2_1:Mux_B.X
-c <= Mux_2_1:Mux_C.X
-d <= Mux_2_1:Mux_D.X
-e <= Mux_2_1:Mux_E.X
-f <= Mux_2_1:Mux_F.X
-g <= Mux_2_1:Mux_G.X
-digit <= decoder_waterLevel:decoderWL_inst.digit
+erro << erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada << valvulaDeEntrada:valvulaDeEntrada_inst.VE
+a << Mux_2_1:Mux_A.X
+b << Mux_2_1:Mux_B.X
+c << Mux_2_1:Mux_C.X
+d << Mux_2_1:Mux_D.X
+e << Mux_2_1:Mux_E.X
+f << Mux_2_1:Mux_F.X
+g << Mux_2_1:Mux_G.X
+digit << decoder_waterLevel:decoderWL_inst.digit
 
 
 |main|error:error_inst
@@ -119,7 +119,6 @@ d <= AndD.DB_MAX_OUTPUT_PORT_TYPE
 e <= XorE.DB_MAX_OUTPUT_PORT_TYPE
 f <= Xorf.DB_MAX_OUTPUT_PORT_TYPE
 g <= bit0.DB_MAX_OUTPUT_PORT_TYPE
-digit <= <GND>
 
 
 |main|Mux_2_1:Mux_A

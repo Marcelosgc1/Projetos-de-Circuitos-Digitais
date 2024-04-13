@@ -75,8 +75,8 @@ output digit
 		.H(high),
 		.M(middle),
 		.L(low),
-		.S0(Bit0),
-		.S1(Bit1)
+		.S0(bit0),
+		.S1(bit1)
 	);
 		
 		
@@ -102,8 +102,8 @@ output digit
 		.sprinkler(high),
 		.drip(middle),
 		.aut(low),
-		.S0(Bit2),
-		.S1(Bit3)
+		.S0(bit2),
+		.S1(bit3)
 	);
 		
 	decoder_irrigation decoderI_inst

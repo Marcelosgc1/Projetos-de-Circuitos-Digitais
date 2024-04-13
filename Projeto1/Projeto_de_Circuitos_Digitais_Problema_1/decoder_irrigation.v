@@ -7,8 +7,7 @@ output c,
 output d,
 output e,
 output f,
-output g,
-output digit
+output g
 );
 	
 	wire S0, S1;
