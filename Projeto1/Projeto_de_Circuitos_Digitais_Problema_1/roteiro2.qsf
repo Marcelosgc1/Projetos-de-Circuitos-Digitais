@@ -81,3 +81,6 @@ set_location_assignment PIN_92 -to f
 set_location_assignment PIN_39 -to g
 set_global_assignment -name VERILOG_FILE decoder_waterLevel.v
 set_global_assignment -name VERILOG_FILE encoder_waterLevel.v
+set_global_assignment -name VERILOG_FILE Mux_2_1.v
+set_global_assignment -name VERILOG_FILE encoder_irrigation.v
+set_global_assignment -name VERILOG_FILE decoder_irrigation.v

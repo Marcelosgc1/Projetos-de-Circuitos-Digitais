@@ -5,17 +5,17 @@ low => low.IN3
 umidadeDoSolo => umidadeDoSolo.IN1
 umidadeDoAr => umidadeDoAr.IN2
 temperatura => temperatura.IN2
-erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme <= saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada <= valvulaDeEntrada:valvulaDeEntrada_inst.VE
-a <= decoder_waterLevel:decoderWL_inst.a
-b <= decoder_waterLevel:decoderWL_inst.b
-c <= decoder_waterLevel:decoderWL_inst.c
-d <= decoder_waterLevel:decoderWL_inst.d
-e <= decoder_waterLevel:decoderWL_inst.e
-f <= decoder_waterLevel:decoderWL_inst.f
-g <= decoder_waterLevel:decoderWL_inst.g
-digit <= decoder_waterLevel:decoderWL_inst.digit
+erro << erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada << valvulaDeEntrada:valvulaDeEntrada_inst.VE
+a << decoder_waterLevel:decoderWL_inst.a
+b << decoder_waterLevel:decoderWL_inst.b
+c << decoder_waterLevel:decoderWL_inst.c
+d << decoder_waterLevel:decoderWL_inst.d
+e << decoder_waterLevel:decoderWL_inst.e
+f << decoder_waterLevel:decoderWL_inst.f
+g << decoder_waterLevel:decoderWL_inst.g
+digit << decoder_waterLevel:decoderWL_inst.digit
 
 
 |main|error:error_inst

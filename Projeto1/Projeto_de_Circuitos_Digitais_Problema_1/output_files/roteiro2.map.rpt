@@ -1,5 +1,5 @@
 Analysis & Synthesis report for roteiro2
-Fri Apr 12 22:33:43 2024
+Sat Apr 13 01:52:37 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Apr 12 22:33:43 2024       ;
+; Analysis & Synthesis Status ; Successful - Sat Apr 13 01:52:37 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; roteiro2                                    ;
 ; Top-level Entity Name       ; main                                        ;
@@ -256,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 12 22:33:24 2024
+    Info: Processing started: Sat Apr 13 01:52:15 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roteiro2 -c roteiro2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -278,6 +278,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder_waterLevel File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/decoder_waterLevel.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_waterlevel.v
     Info (12023): Found entity 1: encoder_waterLevel File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/encoder_waterLevel.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
+    Info (12023): Found entity 1: Mux_2_1 File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/Mux_2_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file encoder_irrigation.v
+    Info (12023): Found entity 1: encoder_irrigation File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_irrigation.v
+    Info (12023): Found entity 1: decoder_irrigation File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at main.v(76): created implicit net for "Bit0" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 76
 Warning (10236): Verilog HDL Implicit Net warning at main.v(77): created implicit net for "Bit1" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 77
 Info (12127): Elaborating entity "main" for the top level hierarchy
@@ -308,9 +314,9 @@ Info (21057): Implemented 20 device resources after synthesis - the final resour
     Info (21061): Implemented 3 logic cells
 Info (144001): Generated suppressed messages file F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/output_files/roteiro2.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4702 megabytes
-    Info: Processing ended: Fri Apr 12 22:33:43 2024
-    Info: Elapsed time: 00:00:19
+    Info: Peak virtual memory: 4699 megabytes
+    Info: Processing ended: Sat Apr 13 01:52:37 2024
+    Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:30
 
 

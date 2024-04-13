@@ -94,5 +94,10 @@ output digit
 		
 		
 		);
+		
+		
+		
+		
+		
 	
 endmodule	
