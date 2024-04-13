@@ -68,7 +68,7 @@ output digit
 		.out(ValvulaDeGotejamento)
 	);
 	
-	coder coder_inst
+	encoder_waterLevel encoderWL_inst
 	(
 		.H(high),
 		.M(middle),
@@ -79,7 +79,7 @@ output digit
 		
 		
 		
-	decoder decoder_inst
+	decoder_waterLevel decoderWL_inst
 		(
 			.Bit0(bit0),
 			.Bit1(bit1),

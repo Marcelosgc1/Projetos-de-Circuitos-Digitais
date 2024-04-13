@@ -1,6 +1,6 @@
 Analysis & Synthesis report for roteiro2
-Fri Apr 12 12:23:08 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fri Apr 12 22:33:43 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -14,7 +14,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "coder:coder_inst"
+  9. Port Connectivity Checks: "encoder_waterLevel:encoderWL_inst"
  10. Port Connectivity Checks: "drip:drip_inst"
  11. Port Connectivity Checks: "sprinkler:sprinkler_inst"
  12. Analysis & Synthesis Messages
@@ -25,9 +25,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -37,16 +37,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Apr 12 12:23:08 2024       ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status ; Successful - Fri Apr 12 22:33:43 2024       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; roteiro2                                    ;
 ; Top-level Entity Name       ; main                                        ;
 ; Family                      ; MAX II                                      ;
@@ -133,8 +132,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -144,21 +143,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; error.v                          ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/error.v                ;         ;
-; alarm.v                          ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/alarm.v                ;         ;
-; valvulaDeEntrada.v               ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/valvulaDeEntrada.v     ;         ;
-; main.v                           ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/main.v                 ;         ;
-; authorizedToIrrigate.v           ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/authorizedToIrrigate.v ;         ;
-; sprinkler.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/sprinkler.v            ;         ;
-; drip.v                           ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/drip.v                 ;         ;
-; decoder.v                        ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/decoder.v              ;         ;
-; coder.v                          ; yes             ; User Verilog HDL File  ; /home/aluno/marcelo/roteiro2_teste/coder.v                ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                        ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; error.v                          ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/error.v                ;         ;
+; alarm.v                          ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/alarm.v                ;         ;
+; valvulaDeEntrada.v               ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/valvulaDeEntrada.v     ;         ;
+; main.v                           ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v                 ;         ;
+; authorizedToIrrigate.v           ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/authorizedToIrrigate.v ;         ;
+; sprinkler.v                      ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler.v            ;         ;
+; drip.v                           ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/drip.v                 ;         ;
+; decoder_waterLevel.v             ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/decoder_waterLevel.v   ;         ;
+; encoder_waterLevel.v             ; yes             ; User Verilog HDL File  ; F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/encoder_waterLevel.v   ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -224,7 +223,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "coder:coder_inst"                                                                   ;
+; Port Connectivity Checks: "encoder_waterLevel:encoderWL_inst"                                                  ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -256,68 +255,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 12 12:23:03 2024
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Apr 12 22:33:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off roteiro2 -c roteiro2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file error.v
-    Info (12023): Found entity 1: error File: /home/aluno/marcelo/roteiro2_teste/error.v Line: 1
+    Info (12023): Found entity 1: error File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/error.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alarm.v
-    Info (12023): Found entity 1: alarm File: /home/aluno/marcelo/roteiro2_teste/alarm.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file valvulaDeEntrada.v
-    Info (12023): Found entity 1: valvulaDeEntrada File: /home/aluno/marcelo/roteiro2_teste/valvulaDeEntrada.v Line: 1
+    Info (12023): Found entity 1: alarm File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/alarm.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file valvuladeentrada.v
+    Info (12023): Found entity 1: valvulaDeEntrada File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/valvulaDeEntrada.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file authorizedToIrrigate.v
-    Info (12023): Found entity 1: authorizedToIrrigate File: /home/aluno/marcelo/roteiro2_teste/authorizedToIrrigate.v Line: 1
+    Info (12023): Found entity 1: main File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file authorizedtoirrigate.v
+    Info (12023): Found entity 1: authorizedToIrrigate File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/authorizedToIrrigate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sprinkler.v
-    Info (12023): Found entity 1: sprinkler File: /home/aluno/marcelo/roteiro2_teste/sprinkler.v Line: 1
+    Info (12023): Found entity 1: sprinkler File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file drip.v
-    Info (12023): Found entity 1: drip File: /home/aluno/marcelo/roteiro2_teste/drip.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
-    Info (12023): Found entity 1: decoder File: /home/aluno/marcelo/roteiro2_teste/decoder.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file coder.v
-    Info (12023): Found entity 1: coder File: /home/aluno/marcelo/roteiro2_teste/coder.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at main.v(76): created implicit net for "Bit0" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 76
-Warning (10236): Verilog HDL Implicit Net warning at main.v(77): created implicit net for "Bit1" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 77
+    Info (12023): Found entity 1: drip File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/drip.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_waterlevel.v
+    Info (12023): Found entity 1: decoder_waterLevel File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/decoder_waterLevel.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file encoder_waterlevel.v
+    Info (12023): Found entity 1: encoder_waterLevel File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/encoder_waterLevel.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(76): created implicit net for "Bit0" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 76
+Warning (10236): Verilog HDL Implicit Net warning at main.v(77): created implicit net for "Bit1" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 77
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "error" for hierarchy "error:error_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 30
-Info (12128): Elaborating entity "alarm" for hierarchy "alarm:alarm_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 37
-Info (12128): Elaborating entity "valvulaDeEntrada" for hierarchy "valvulaDeEntrada:valvulaDeEntrada_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 44
-Info (12128): Elaborating entity "authorizedToIrrigate" for hierarchy "authorizedToIrrigate:authorizedToIrrigate_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 51
-Info (12128): Elaborating entity "sprinkler" for hierarchy "sprinkler:sprinkler_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 60
-Info (12128): Elaborating entity "drip" for hierarchy "drip:drip_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 69
-Info (12128): Elaborating entity "coder" for hierarchy "coder:coder_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 78
-Info (12128): Elaborating entity "decoder" for hierarchy "decoder:decoder_inst" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 96
+Info (12128): Elaborating entity "error" for hierarchy "error:error_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 30
+Info (12128): Elaborating entity "alarm" for hierarchy "alarm:alarm_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 37
+Info (12128): Elaborating entity "valvulaDeEntrada" for hierarchy "valvulaDeEntrada:valvulaDeEntrada_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 44
+Info (12128): Elaborating entity "authorizedToIrrigate" for hierarchy "authorizedToIrrigate:authorizedToIrrigate_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 51
+Info (12128): Elaborating entity "sprinkler" for hierarchy "sprinkler:sprinkler_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 60
+Info (12128): Elaborating entity "drip" for hierarchy "drip:drip_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 69
+Info (12128): Elaborating entity "encoder_waterLevel" for hierarchy "encoder_waterLevel:encoderWL_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 78
+Info (12128): Elaborating entity "decoder_waterLevel" for hierarchy "decoder_waterLevel:decoderWL_inst" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 96
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "a" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 11
-    Warning (13410): Pin "b" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 12
-    Warning (13410): Pin "c" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 13
-    Warning (13410): Pin "d" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 14
-    Warning (13410): Pin "e" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 15
-    Warning (13410): Pin "f" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 16
-    Warning (13410): Pin "g" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 17
-    Warning (13410): Pin "digit" is stuck at GND File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 19
+    Warning (13410): Pin "a" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 11
+    Warning (13410): Pin "b" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 12
+    Warning (13410): Pin "c" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 13
+    Warning (13410): Pin "d" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 14
+    Warning (13410): Pin "e" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 15
+    Warning (13410): Pin "f" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 16
+    Warning (13410): Pin "g" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 17
+    Warning (13410): Pin "digit" is stuck at GND File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 19
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "umidadeDoSolo" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 5
-    Warning (15610): No output dependent on input pin "umidadeDoAr" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 6
-    Warning (15610): No output dependent on input pin "temperatura" File: /home/aluno/marcelo/roteiro2_teste/main.v Line: 7
+    Warning (15610): No output dependent on input pin "umidadeDoSolo" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 5
+    Warning (15610): No output dependent on input pin "umidadeDoAr" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 6
+    Warning (15610): No output dependent on input pin "temperatura" File: F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 7
 Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 3 logic cells
-Info (144001): Generated suppressed messages file /home/aluno/marcelo/roteiro2_teste/output_files/roteiro2.map.smsg
+Info (144001): Generated suppressed messages file F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/output_files/roteiro2.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Fri Apr 12 12:23:08 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Fri Apr 12 22:33:43 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/aluno/marcelo/roteiro2_teste/output_files/roteiro2.map.smsg.
+The suppressed messages can be found in F:/Users/marce/Documents/CircuitosDigitais/Projeto1/Projeto_de_Circuitos_Digitais_Problema_1/output_files/roteiro2.map.smsg.
 
 

@@ -5,17 +5,17 @@ low => low.IN3
 umidadeDoSolo => umidadeDoSolo.IN1
 umidadeDoAr => umidadeDoAr.IN2
 temperatura => temperatura.IN2
-erro << erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada << valvulaDeEntrada:valvulaDeEntrada_inst.VE
-a << decoder:decoder_inst.a
-b << decoder:decoder_inst.b
-c << decoder:decoder_inst.c
-d << decoder:decoder_inst.d
-e << decoder:decoder_inst.e
-f << decoder:decoder_inst.f
-g << decoder:decoder_inst.g
-digit << decoder:decoder_inst.digit
+erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme <= saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada <= valvulaDeEntrada:valvulaDeEntrada_inst.VE
+a <= decoder_waterLevel:decoderWL_inst.a
+b <= decoder_waterLevel:decoderWL_inst.b
+c <= decoder_waterLevel:decoderWL_inst.c
+d <= decoder_waterLevel:decoderWL_inst.d
+e <= decoder_waterLevel:decoderWL_inst.e
+f <= decoder_waterLevel:decoderWL_inst.f
+g <= decoder_waterLevel:decoderWL_inst.g
+digit <= decoder_waterLevel:decoderWL_inst.digit
 
 
 |main|error:error_inst
@@ -60,7 +60,7 @@ Ua => And0.IN2
 out <= And0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|coder:coder_inst
+|main|encoder_waterLevel:encoderWL_inst
 L => Or0.IN0
 M => Or1.IN0
 H => Or0.IN1
@@ -69,20 +69,20 @@ S0 <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 S1 <= Or1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|decoder:decoder_inst
-Bit0 => NorB.IN0
-Bit0 => OrE.IN0
+|main|decoder_waterLevel:decoderWL_inst
+Bit0 => OrB.IN0
+Bit0 => AndE.IN0
 Bit0 => a.DATAIN
 Bit0 => d.DATAIN
 Bit0 => g.DATAIN
-Bit1 => NorB.IN1
-Bit1 => OrE.IN1
+Bit1 => OrB.IN1
+Bit1 => AndE.IN1
 Bit1 => c.DATAIN
 a <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
-b <= NorB.DB_MAX_OUTPUT_PORT_TYPE
+b <= OrB.DB_MAX_OUTPUT_PORT_TYPE
 c <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
 d <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
-e <= OrE.DB_MAX_OUTPUT_PORT_TYPE
+e <= AndE.DB_MAX_OUTPUT_PORT_TYPE
 f <= <GND>
 g <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
 digit <= <GND>
