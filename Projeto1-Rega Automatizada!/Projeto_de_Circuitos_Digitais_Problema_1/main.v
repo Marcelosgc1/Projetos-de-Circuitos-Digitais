@@ -109,8 +109,8 @@ output digit4
 		
 	encoder_irrigation encoderI_inst
 	(
-		.sprinkler(ValvulaDeGotejamento),
-		.drip(ValvulaDeAspersao),
+		.sprinkler(ValvulaDeAspersao),
+		.drip(ValvulaDeGotejamento),
 		.aut(Autorizacao),
 		.b0(bit2),
 		.b1(bit3)
