@@ -1,22 +1,25 @@
 |main
-high => high.IN4
-middle => middle.IN5
-low => low.IN4
+high => high.IN3
+middle => middle.IN4
+low => low.IN3
 umidadeDoSolo => umidadeDoSolo.IN1
 umidadeDoAr => umidadeDoAr.IN2
 temperatura => temperatura.IN2
 seletor => seletor.IN7
-erro << erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada << valvulaDeEntrada:valvulaDeEntrada_inst.VE
-a << Mux_2_1:Mux_A.X
-b << Mux_2_1:Mux_B.X
-c << Mux_2_1:Mux_C.X
-d << Mux_2_1:Mux_D.X
-e << Mux_2_1:Mux_E.X
-f << Mux_2_1:Mux_F.X
-g << Mux_2_1:Mux_G.X
-digit << decoder_waterLevel:decoderWL_inst.digit
+erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme <= saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada <= valvulaDeEntrada:valvulaDeEntrada_inst.VE
+a <= Mux_2_1:Mux_A.X
+b <= Mux_2_1:Mux_B.X
+c <= Mux_2_1:Mux_C.X
+d <= Mux_2_1:Mux_D.X
+e <= Mux_2_1:Mux_E.X
+f <= Mux_2_1:Mux_F.X
+g <= Mux_2_1:Mux_G.X
+digit1 <= <GND>
+digit2 <= <VCC>
+digit3 <= <VCC>
+digit4 <= <VCC>
 
 
 |main|error:error_inst
@@ -62,63 +65,65 @@ out <= And0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|encoder_waterLevel:encoderWL_inst
-L => Or0.IN0
-M => Or1.IN0
-H => Or0.IN1
-H => Or1.IN1
-S0 <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-S1 <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+L => L_H_xnor_M_and.IN1
+L => M_L_and.IN0
+M => H_M_xnor.IN0
+M => M_L_and.IN1
+H => H_M_xnor.IN1
+b0 <= L_H_xnor_M_and.DB_MAX_OUTPUT_PORT_TYPE
+b1 <= M_L_and.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|decoder_waterLevel:decoderWL_inst
-Bit0 => OrB.IN0
-Bit0 => AndE.IN0
+Bit0 => OrE.IN0
+Bit0 => AndSg.IN0
+Bit0 => AndB.IN0
 Bit0 => c.DATAIN
-Bit1 => OrB.IN1
-Bit1 => AndE.IN1
+Bit1 => AndB.IN1
+Bit1 => OrE.IN1
+Bit1 => AndSg.IN1
 Bit1 => a.DATAIN
 Bit1 => d.DATAIN
-Bit1 => g.DATAIN
 a <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
-b <= OrB.DB_MAX_OUTPUT_PORT_TYPE
+b <= AndB.DB_MAX_OUTPUT_PORT_TYPE
 c <= Bit0.DB_MAX_OUTPUT_PORT_TYPE
 d <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
-e <= AndE.DB_MAX_OUTPUT_PORT_TYPE
-f <= <GND>
-g <= Bit1.DB_MAX_OUTPUT_PORT_TYPE
-digit <= <GND>
+e <= OrE.DB_MAX_OUTPUT_PORT_TYPE
+f <= <VCC>
+g <= AndSg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|encoder_irrigation:encoderI_inst
-sprinkler => Or0.IN0
-drip => Or1.IN0
-aut => Or0.IN1
-aut => Or1.IN1
-S0 <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-S1 <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+sprinkler => Aut_Inverted_Sprinkler_Xor.IN0
+sprinkler => Sprinkler_Inverted_Aut_Inverted_Xor_Drip_And.IN1
+drip => Aut_Inverted_Drip_Xor.IN0
+drip => Drip_Inverted_Aut_Inverted_Xor_Sprinkler_And.IN1
+aut => Aut_Inverted_Sprinkler_Xor.IN1
+aut => Aut_Inverted_Drip_Xor.IN1
+b0 <= Sprinkler_Inverted_Aut_Inverted_Xor_Drip_And.DB_MAX_OUTPUT_PORT_TYPE
+b1 <= Drip_Inverted_Aut_Inverted_Xor_Sprinkler_And.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|decoder_irrigation:decoderI_inst
-bit0 => XorA.IN0
-bit0 => AndB.IN0
-bit0 => XorC.IN0
-bit0 => XorE.IN0
-bit0 => Xorf.IN0
-bit0 => AndD.IN0
-bit0 => g.DATAIN
-bit1 => XorA.IN1
-bit1 => XorC.IN1
-bit1 => AndD.IN1
-bit1 => XorE.IN1
-bit1 => Xorf.IN1
-bit1 => AndB.IN1
-a <= XorA.DB_MAX_OUTPUT_PORT_TYPE
-b <= AndB.DB_MAX_OUTPUT_PORT_TYPE
-c <= XorC.DB_MAX_OUTPUT_PORT_TYPE
-d <= AndD.DB_MAX_OUTPUT_PORT_TYPE
-e <= XorE.DB_MAX_OUTPUT_PORT_TYPE
-f <= Xorf.DB_MAX_OUTPUT_PORT_TYPE
-g <= bit0.DB_MAX_OUTPUT_PORT_TYPE
+bit0 => AndA.IN0
+bit0 => AndC.IN0
+bit0 => AndE.IN0
+bit0 => Andf.IN0
+bit0 => Andg.IN0
+bit0 => d.DATAIN
+bit1 => AndA.IN1
+bit1 => AndC.IN1
+bit1 => AndE.IN1
+bit1 => Andf.IN1
+bit1 => Andg.IN1
+bit1 => b.DATAIN
+a <= AndA.DB_MAX_OUTPUT_PORT_TYPE
+b <= bit1.DB_MAX_OUTPUT_PORT_TYPE
+c <= AndC.DB_MAX_OUTPUT_PORT_TYPE
+d <= bit0.DB_MAX_OUTPUT_PORT_TYPE
+e <= AndE.DB_MAX_OUTPUT_PORT_TYPE
+f <= Andf.DB_MAX_OUTPUT_PORT_TYPE
+g <= Andg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|Mux_2_1:Mux_A

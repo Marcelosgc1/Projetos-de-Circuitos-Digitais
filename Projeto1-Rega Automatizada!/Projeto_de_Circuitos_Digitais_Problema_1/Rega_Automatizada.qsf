@@ -71,7 +71,6 @@ set_location_assignment PIN_30 -to umidadeDoSolo
 set_location_assignment PIN_86 -to saidaDoAlarme
 set_location_assignment PIN_54 -to ValvulaDeEntrada
 set_location_assignment PIN_76 -to erro
-set_location_assignment PIN_88 -to digit
 set_location_assignment PIN_90 -to a
 set_location_assignment PIN_70 -to b
 set_location_assignment PIN_41 -to c
@@ -84,3 +83,8 @@ set_global_assignment -name VERILOG_FILE encoder_waterLevel.v
 set_global_assignment -name VERILOG_FILE Mux_2_1.v
 set_global_assignment -name VERILOG_FILE encoder_irrigation.v
 set_global_assignment -name VERILOG_FILE decoder_irrigation.v
+set_location_assignment PIN_34 -to seletor
+set_location_assignment PIN_37 -to digit1
+set_location_assignment PIN_66 -to digit2
+set_location_assignment PIN_68 -to digit3
+set_location_assignment PIN_88 -to digit4

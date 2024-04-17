@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/simulation/modelsim
+valarm
+Z1 !s110 1713313747
+!i10b 1
+!s100 K;;48J_c7NbJTHVU_CYT60
+I5n:WlmFRjMnnAX4:fWO402
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1713109080
+8G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/alarm.v
+FG:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/alarm.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1713313747.000000
+!s107 G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/alarm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO|G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/alarm.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO
+Z7 tCvgOpt 0
+verror
+R1
+!i10b 1
+!s100 X?lFh`gXjoSZb[L<RYP6C3
+IjXaL?V:>=H00dV;Z8m>8k0
+R2
+R0
+R3
+8G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/error.v
+FG:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/error.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1713313746.000000
+!s107 G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/error.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO|G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/error.v|
+!i113 1
+R5
+R6
+R7
+vmain
+!s110 1713313778
+!i10b 1
+!s100 hE:aZ;on1_52QJiNE33550
+IjK=m8<JJQE;j8BX>RFeK32
+R2
+R0
+w1713313082
+8G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/simulation/modelsim/Rega_Automatizada.vo
+FG:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/simulation/modelsim/Rega_Automatizada.vo
+L0 31
+R4
+r1
+!s85 0
+31
+!s108 1713313778.000000
+!s107 G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/simulation/modelsim/Rega_Automatizada.vo|
+!s90 -reportprogress|300|-work|work|G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/simulation/modelsim/Rega_Automatizada.vo|
+!i113 1
+o-work work
+R7
+vvalvulaDeEntrada
+!s110 1713313748
+!i10b 1
+!s100 IjI2MzClLOAD4==430FQ43
+In:EaCe528zJPzUX=`@D@a1
+R2
+R0
+R3
+8G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/valvulaDeEntrada.v
+FG:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/valvulaDeEntrada.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1713313748.000000
+!s107 G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/valvulaDeEntrada.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO|G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/valvulaDeEntrada.v|
+!i113 1
+R5
+R6
+R7
+nvalvula@de@entrada

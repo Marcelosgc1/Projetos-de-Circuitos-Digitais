@@ -1,5 +1,5 @@
 Assembler report for Rega_Automatizada
-Sat Apr 13 16:44:15 2024
+Tue Apr 16 21:39:33 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: F:/Users/marce/Documents/CircuitosDigitais/Projeto1-Rega Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/output_files/Rega_Automatizada.pof
+  5. Assembler Device Options: G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/output_files/Rega_Automatizada.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Apr 13 16:44:15 2024 ;
+; Assembler Status      ; Successful - Tue Apr 16 21:39:33 2024 ;
 ; Revision Name         ; Rega_Automatizada                     ;
 ; Top-level Entity Name ; main                                  ;
 ; Family                ; MAX II                                ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                                          ;
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                                          ;
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; F:/Users/marce/Documents/CircuitosDigitais/Projeto1-Rega Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/output_files/Rega_Automatizada.pof ;
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                ;
++------------------------------------------------------------------------------------------+
+; File Name                                                                                ;
++------------------------------------------------------------------------------------------+
+; G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/output_files/Rega_Automatizada.pof ;
++------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: F:/Users/marce/Documents/CircuitosDigitais/Projeto1-Rega Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/output_files/Rega_Automatizada.pof ;
-+----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                                     ;
-+----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00191230                                                                                                                                                  ;
-; Checksum       ; 0x001916B8                                                                                                                                                  ;
-+----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: G:/Projeto_de_Circuitos_Digitais_Problema_1_RESOLVIDO/output_files/Rega_Automatizada.pof ;
++----------------+---------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                           ;
++----------------+---------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00190951                                                                                        ;
+; Checksum       ; 0x00190D59                                                                                        ;
++----------------+---------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Apr 13 16:44:14 2024
+    Info: Processing started: Tue Apr 16 21:39:31 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Rega_Automatizada -c Rega_Automatizada
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4648 megabytes
-    Info: Processing ended: Sat Apr 13 16:44:15 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Apr 16 21:39:33 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

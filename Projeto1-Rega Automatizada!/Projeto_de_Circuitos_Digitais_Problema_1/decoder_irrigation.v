@@ -23,13 +23,13 @@ output g
 	not inv1(S1, bit1);
 	
 	
-	xor XorA(a, bit0, bit1);
-	and AndB(b, bit0, S1);
-	xor XorC(c, bit0, bit1);
-	and AndD(d, S0, bit1);
-	xor XorE(e, bit0, bit1);
-	xor Xorf(f, bit0, bit1);
-	and Andg(g, bit0, bit0);	
+	and AndA(a, bit0, bit1);
+	and AndB(b, bit1, bit1);
+	and AndC(c, bit0, bit1);
+	and AndD(d, bit0, bit0);
+	and AndE(e, bit0, bit1);
+	and Andf(f, bit0, bit1);
+	and Andg(g, bit1, S0);	
 	
 	
 endmodule 

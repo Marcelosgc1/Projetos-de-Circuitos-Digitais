@@ -7,26 +7,30 @@ output c,
 output d,
 output e,
 output f,
-output g,
-output digit
+output g
 );
 
-	wire S0;
+	//==Legenda== combinação dos bits -> significado (o que vai aparecer no mostrador)
+	
+	//00 -> ERROR/CRIT (0)
+	//01 -> LOW (1)
+	//10 -> MIDDLE (2)
+	//11 -> HIGH (3)
+	
+
+	wire S0, S1;
 	
 	not Invbit0(S0, Bit0);
+	not Invbit1(S1, Bit1);
 	
 	
-	and AndSa(a, Bit1, Bit1); //A tem o mesmo valor do Bit1
-	or OrB(b, Bit0, Bit1);	
-	and AndSc(c, Bit0, Bit0); //C tem o mesmo valor do Bit0
-	and AndSd(d, Bit1, Bit1); //D tem o mesmo valor do Bit1
-	and AndE(e, S0, Bit1);
-	and AndF(f, S0, Bit0);
-	and AndSg(g, Bit1, Bit1); //G tem o mesmo valor do Bit1
-	
-	
-	and AndDigit(digit, S0, Bit0);
-	
-	
+	and AndSa(a, S1, S1); //A tem o valor invertido do Bit1
+	and AndB(b, S0, S1);	
+	and AndSc(c, S0, S0); //C tem o valor invertido do Bit0
+	and AndSd(d, S1, S1); //D tem o valor invertido do Bit1
+	or OrE(e, Bit0, S1);
+	or OrF(f, Bit1, S1);
+	and AndSg(g, S1, Bit0);
+		
 	
 endmodule 
