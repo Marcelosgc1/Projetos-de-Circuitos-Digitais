@@ -1,0 +1,9 @@
+module error(H, M, L, S0, S1, S2, S3, S4);
+	input H, M, L;
+	output S0, S1, S2, S3, S4;
+	not inv0(S0, M);
+	not inv1(S1, L);
+	and And0(S2, H, S0);
+	and And1(S3, M, S1);
+	or Or0(S4, S3, S2);
+endmodule

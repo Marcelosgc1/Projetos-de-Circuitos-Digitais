@@ -1,0 +1,24 @@
+module decoder_irrigation(
+input Bit0,
+input Bit1,
+output a,
+output b,
+output c,
+output d,
+output e,
+output f,
+output g,
+output digit
+);
+
+
+
+
+
+
+
+
+	
+	
+	
+endmodule 

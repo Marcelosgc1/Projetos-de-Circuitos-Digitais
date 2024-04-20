@@ -1,0 +1,16 @@
+module encoder_irrigation(
+input sprinkler,
+input drip,
+input aut,
+output S0,
+output S1
+);
+
+
+
+
+
+
+
+
+endmodule 
