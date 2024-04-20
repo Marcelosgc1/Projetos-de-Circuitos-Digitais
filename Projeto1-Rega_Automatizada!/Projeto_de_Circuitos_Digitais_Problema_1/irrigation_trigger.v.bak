@@ -1,0 +1,16 @@
+module authorizedToIrrigate(
+input wire L,
+input wire erro,
+input wire Us,
+output S0,
+output S1,
+output S2,
+output wire out
+);
+	not Inv0(S0, erro);
+	not Inv1(S1, Us);
+	and And0(S2, S1, S0, L); 
+	
+	assign out = S2;
+
+endmodule 

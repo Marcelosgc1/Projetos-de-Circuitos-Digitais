@@ -1,0 +1,5 @@
+module decoder(
+input wire Sprinkler;
+input wire Drip;
+input wire Error
+);
