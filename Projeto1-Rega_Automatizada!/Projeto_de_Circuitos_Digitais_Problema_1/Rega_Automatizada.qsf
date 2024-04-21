@@ -72,7 +72,6 @@ set_location_assignment PIN_98 -to d
 set_location_assignment PIN_100 -to e
 set_location_assignment PIN_92 -to f
 set_location_assignment PIN_39 -to g
-set_global_assignment -name VERILOG_FILE encoder_waterLevel.v
 set_global_assignment -name VERILOG_FILE Mux_2_1.v
 set_global_assignment -name VERILOG_FILE encoder_irrigation.v
 set_global_assignment -name VERILOG_FILE decoder_irrigation.v
@@ -88,3 +87,4 @@ set_global_assignment -name VERILOG_FILE inlet_valve_trigger.v
 set_global_assignment -name VERILOG_FILE irrigation_trigger.v
 set_global_assignment -name VERILOG_FILE sprinkler_trigger.v
 set_global_assignment -name VERILOG_FILE decoder_water_tank_level.v
+set_global_assignment -name VERILOG_FILE encoder_water_tank_level.v

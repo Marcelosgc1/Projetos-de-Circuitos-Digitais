@@ -64,14 +64,14 @@ air_humidity_i => drip_activation_result.IN2
 drip_state_o <= drip_activation_result.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|encoder_waterLevel:encoderWL_inst
-L => L_H_xnor_M_and.IN1
-L => M_L_and.IN0
-M => H_M_xnor.IN0
-M => M_L_and.IN1
-H => H_M_xnor.IN1
-b0 <= L_H_xnor_M_and.DB_MAX_OUTPUT_PORT_TYPE
-b1 <= M_L_and.DB_MAX_OUTPUT_PORT_TYPE
+|main|encoder_water_tank_level:encodes_water_tank_level
+high_level_indicator_i => xnor0.IN0
+medium_level_indicator_i => xnor0.IN1
+medium_level_indicator_i => bit1_value.IN0
+low_level_indicator_i => bit0_value.IN1
+low_level_indicator_i => bit1_value.IN1
+bit0_o <= bit0_value.DB_MAX_OUTPUT_PORT_TYPE
+bit1_o <= bit1_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|decoder_water_tank_level:decodes_water_tank_level
