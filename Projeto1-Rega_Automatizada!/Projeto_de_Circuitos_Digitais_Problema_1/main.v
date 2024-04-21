@@ -92,19 +92,17 @@ output digit4
 		
 		
 		
-	decoder_waterLevel decoderWL_inst
+	decoder_water_tank_level decodes_water_tank_level
 		(
-			.Bit0(bit0),
-			.Bit1(bit1),
-			.a(Ca),
-			.b(Cb),
-			.c(Cc),
-			.d(Cd),
-			.e(Ce),
-			.f(Cf),
-			.g(Cg)
-		
-		
+			bit0,
+			bit1,
+			Ca,
+			Cb,
+			Cc,
+			Cd,
+			Ce,
+			Cf,
+			Cg
 		);
 		
 	encoder_irrigation encoderI_inst
