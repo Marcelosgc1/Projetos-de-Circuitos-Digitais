@@ -81,15 +81,14 @@ output digit4
 		ValvulaDeGotejamento
 	);
 	
-	encoder_waterLevel encoderWL_inst
+	encoder_water_tank_level encodes_water_tank_level
 	(
-		.H(high),
-		.M(middle),
-		.L(low),
-		.b0(bit0),
-		.b1(bit1)
+		high,
+		middle,
+		low,
+		bit0,
+		bit1
 	);
-		
 		
 		
 	decoder_water_tank_level decodes_water_tank_level
