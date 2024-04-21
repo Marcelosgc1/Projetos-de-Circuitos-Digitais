@@ -1,6 +1,6 @@
-// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
-// and other software and tools, and its AMPP partner logic 
+// and other software and tools, and any partner logic 
 // functions, and any output files from any of the foregoing 
 // (including device programming or simulation files), and any 
 // associated documentation or information are expressly subject 
@@ -10,13 +10,14 @@
 // agreement, including, without limitation, that your use is for
 // the sole purpose of programming logic devices manufactured by
 // Intel and sold by Intel or its authorized distributors.  Please
-// refer to the applicable agreement for further details.
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
 
 // VENDOR "Altera"
 // PROGRAM "Quartus Prime"
-// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
-// DATE "04/20/2024 15:39:02"
+// DATE "04/21/2024 14:56:20"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -96,7 +97,7 @@ wire \seletor~combout ;
 wire \Mux_A|Or0~0_combout ;
 wire \umidadeDoSolo~combout ;
 wire \Mux_A|Or0~1_combout ;
-wire \decoderWL_inst|AndB~0_combout ;
+wire \decodes_water_tank_level|segment_b_status~0_combout ;
 wire \temperatura~combout ;
 wire \umidadeDoAr~combout ;
 wire \encoderI_inst|b1~0_combout ;
@@ -344,9 +345,9 @@ defparam \Mux_A|Or0~1 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X7_Y4_N7
-maxii_lcell \decoderWL_inst|AndB~0 (
+maxii_lcell \decodes_water_tank_level|segment_b_status~0 (
 // Equation(s):
-// \decoderWL_inst|AndB~0_combout  = (((\high~combout  & !\middle~combout )))
+// \decodes_water_tank_level|segment_b_status~0_combout  = (((\high~combout  & !\middle~combout )))
 
 	.clk(gnd),
 	.dataa(vcc),
@@ -365,18 +366,18 @@ maxii_lcell \decoderWL_inst|AndB~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\decoderWL_inst|AndB~0_combout ),
+	.combout(\decodes_water_tank_level|segment_b_status~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \decoderWL_inst|AndB~0 .lut_mask = "00f0";
-defparam \decoderWL_inst|AndB~0 .operation_mode = "normal";
-defparam \decoderWL_inst|AndB~0 .output_mode = "comb_only";
-defparam \decoderWL_inst|AndB~0 .register_cascade_mode = "off";
-defparam \decoderWL_inst|AndB~0 .sum_lutc_input = "datac";
-defparam \decoderWL_inst|AndB~0 .synch_mode = "off";
+defparam \decodes_water_tank_level|segment_b_status~0 .lut_mask = "00f0";
+defparam \decodes_water_tank_level|segment_b_status~0 .operation_mode = "normal";
+defparam \decodes_water_tank_level|segment_b_status~0 .output_mode = "comb_only";
+defparam \decodes_water_tank_level|segment_b_status~0 .register_cascade_mode = "off";
+defparam \decodes_water_tank_level|segment_b_status~0 .sum_lutc_input = "datac";
+defparam \decodes_water_tank_level|segment_b_status~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -474,11 +475,11 @@ defparam \encoderI_inst|b1~1 .synch_mode = "off";
 // Location: LC_X7_Y4_N8
 maxii_lcell \Mux_B|Or0~0 (
 // Equation(s):
-// \Mux_B|Or0~0_combout  = (\seletor~combout  & (((\encoderI_inst|b1~1_combout )))) # (!\seletor~combout  & (((\decoderWL_inst|AndB~0_combout )) # (!\low~combout )))
+// \Mux_B|Or0~0_combout  = (\seletor~combout  & (((\encoderI_inst|b1~1_combout )))) # (!\seletor~combout  & (((\decodes_water_tank_level|segment_b_status~0_combout )) # (!\low~combout )))
 
 	.clk(gnd),
 	.dataa(\low~combout ),
-	.datab(\decoderWL_inst|AndB~0_combout ),
+	.datab(\decodes_water_tank_level|segment_b_status~0_combout ),
 	.datac(\seletor~combout ),
 	.datad(\encoderI_inst|b1~1_combout ),
 	.aclr(gnd),
