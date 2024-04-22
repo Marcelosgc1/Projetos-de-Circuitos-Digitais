@@ -182,6 +182,5 @@ output digit4
 		.S(seletor),
 		.X(g)
 	);
-		
 	
 endmodule	
