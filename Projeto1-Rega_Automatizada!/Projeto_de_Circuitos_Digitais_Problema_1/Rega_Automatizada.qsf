@@ -88,3 +88,4 @@ set_global_assignment -name VERILOG_FILE irrigation_trigger.v
 set_global_assignment -name VERILOG_FILE sprinkler_trigger.v
 set_global_assignment -name VERILOG_FILE decoder_water_tank_level.v
 set_global_assignment -name VERILOG_FILE encoder_water_tank_level.v
+set_global_assignment -name VERILOG_FILE encoder_irrigation_condition.v

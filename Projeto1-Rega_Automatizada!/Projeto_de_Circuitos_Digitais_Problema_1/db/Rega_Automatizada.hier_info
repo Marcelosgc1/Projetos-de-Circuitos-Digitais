@@ -6,20 +6,20 @@ umidadeDoSolo => umidadeDoSolo.IN1
 umidadeDoAr => umidadeDoAr.IN2
 temperatura => temperatura.IN2
 seletor => seletor.IN7
-erro << erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada << inlet_valve_trigger:triggers_inlet_valve.port2
-a << Mux_2_1:Mux_A.X
-b << Mux_2_1:Mux_B.X
-c << Mux_2_1:Mux_C.X
-d << Mux_2_1:Mux_D.X
-e << Mux_2_1:Mux_E.X
-f << Mux_2_1:Mux_F.X
-g << Mux_2_1:Mux_G.X
-digit1 << <GND>
-digit2 << <VCC>
-digit3 << <VCC>
-digit4 << <VCC>
+erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
+saidaDoAlarme <= saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
+ValvulaDeEntrada <= inlet_valve_trigger:triggers_inlet_valve.port2
+a <= Mux_2_1:Mux_A.X
+b <= Mux_2_1:Mux_B.X
+c <= Mux_2_1:Mux_C.X
+d <= Mux_2_1:Mux_D.X
+e <= Mux_2_1:Mux_E.X
+f <= Mux_2_1:Mux_F.X
+g <= Mux_2_1:Mux_G.X
+digit1 <= <GND>
+digit2 <= <VCC>
+digit3 <= <VCC>
+digit4 <= <VCC>
 
 
 |main|error_detector:detects_error

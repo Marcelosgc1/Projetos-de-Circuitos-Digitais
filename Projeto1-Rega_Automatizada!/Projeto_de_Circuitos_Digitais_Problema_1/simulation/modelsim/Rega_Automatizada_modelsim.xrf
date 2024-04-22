@@ -11,6 +11,7 @@ source_file = 1, C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-
 source_file = 1, C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v
 source_file = 1, C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v
 source_file = 1, C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v
+source_file = 1, C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation_condition.v
 source_file = 1, C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/db/Rega_Automatizada.cbx.xml
 design_name = main
 instance = comp, \low~I , low, main, 1
