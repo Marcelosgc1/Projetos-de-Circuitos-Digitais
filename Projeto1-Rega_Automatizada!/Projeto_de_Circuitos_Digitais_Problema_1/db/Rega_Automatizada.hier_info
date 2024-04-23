@@ -104,26 +104,26 @@ b0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 b1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|decoder_irrigation:decoderI_inst
-bit0 => AndA.IN0
-bit0 => AndC.IN0
-bit0 => AndE.IN0
-bit0 => Andf.IN0
-bit0 => Andg.IN0
-bit0 => d.DATAIN
-bit1 => AndA.IN1
-bit1 => AndC.IN1
-bit1 => AndE.IN1
-bit1 => Andf.IN1
-bit1 => Andg.IN1
-bit1 => b.DATAIN
-a <= AndA.DB_MAX_OUTPUT_PORT_TYPE
-b <= bit1.DB_MAX_OUTPUT_PORT_TYPE
-c <= AndC.DB_MAX_OUTPUT_PORT_TYPE
-d <= bit0.DB_MAX_OUTPUT_PORT_TYPE
-e <= AndE.DB_MAX_OUTPUT_PORT_TYPE
-f <= Andf.DB_MAX_OUTPUT_PORT_TYPE
-g <= Andg.DB_MAX_OUTPUT_PORT_TYPE
+|main|decoder_irrigation:decodes_irrigation_condition
+bit0_i => segment_a_status.IN0
+bit0_i => segment_c_status.IN0
+bit0_i => segment_e_status.IN0
+bit0_i => segment_f_status.IN0
+bit0_i => segment_g_status.IN0
+bit0_i => segment_d_o.DATAIN
+bit1_i => segment_a_status.IN1
+bit1_i => segment_c_status.IN1
+bit1_i => segment_e_status.IN1
+bit1_i => segment_f_status.IN1
+bit1_i => segment_g_status.IN1
+bit1_i => segment_b_o.DATAIN
+segment_a_o <= segment_a_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_b_o <= bit1_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_c_o <= segment_c_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_d_o <= bit0_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_e_o <= segment_e_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_f_o <= segment_f_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|Mux_2_1:Mux_A

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Rega_Automatizada
-Mon Apr 22 02:43:03 2024
+Tue Apr 23 01:52:04 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Apr 22 02:43:03 2024       ;
+; Analysis & Synthesis Status ; Successful - Tue Apr 23 01:52:04 2024       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; Rega_Automatizada                           ;
 ; Top-level Entity Name       ; main                                        ;
@@ -237,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 02:42:56 2024
+    Info: Processing started: Tue Apr 23 01:51:57 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Rega_Automatizada -c Rega_Automatizada
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -248,7 +248,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_irrigation.v
     Info (12023): Found entity 1: encoder_irrigation File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_irrigation.v
-    Info (12023): Found entity 1: decoder_irrigation File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation.v Line: 1
+    Info (12023): Found entity 1: decoder_irrigation File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file alarm_trigger.v
     Info (12023): Found entity 1: alarm_trigger File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file drip_trigger.v
@@ -277,8 +277,8 @@ Info (12128): Elaborating entity "drip_trigger" for hierarchy "drip_trigger:trig
 Info (12128): Elaborating entity "encoder_water_tank_level" for hierarchy "encoder_water_tank_level:encodes_water_tank_level" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 91
 Info (12128): Elaborating entity "decoder_water_tank_level" for hierarchy "decoder_water_tank_level:decodes_water_tank_level" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 105
 Info (12128): Elaborating entity "encoder_irrigation" for hierarchy "encoder_irrigation:encoderI_inst" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 114
-Info (12128): Elaborating entity "decoder_irrigation" for hierarchy "decoder_irrigation:decoderI_inst" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 128
-Info (12128): Elaborating entity "Mux_2_1" for hierarchy "Mux_2_1:Mux_A" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 136
+Info (12128): Elaborating entity "decoder_irrigation" for hierarchy "decoder_irrigation:decodes_irrigation_condition" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 127
+Info (12128): Elaborating entity "Mux_2_1" for hierarchy "Mux_2_1:Mux_A" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 135
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "digit1" is stuck at GND File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 19
     Warning (13410): Pin "digit2" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 20
@@ -289,9 +289,9 @@ Info (21057): Implemented 39 device resources after synthesis - the final resour
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 18 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Mon Apr 22 02:43:03 2024
+    Info: Peak virtual memory: 4695 megabytes
+    Info: Processing ended: Tue Apr 23 01:52:04 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 
