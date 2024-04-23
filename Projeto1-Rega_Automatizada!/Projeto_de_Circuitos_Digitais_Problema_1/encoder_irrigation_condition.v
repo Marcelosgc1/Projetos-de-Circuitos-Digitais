@@ -1,4 +1,5 @@
-/* Encodes the irrigations states into three possibilities. */
+/* Encodes the irrigations states into three possibilities: 
+   sprinkler or drip system activated, or both deactivated. */
 
 module encoder_irrigation_condition
 (
@@ -26,5 +27,4 @@ module encoder_irrigation_condition
 	and bit0_value(bit0_o, w0, w2);
 	and bit1_value(bit1_o, w1, w3);
 	
-
 endmodule
