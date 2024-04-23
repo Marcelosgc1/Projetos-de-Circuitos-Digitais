@@ -113,19 +113,18 @@ output digit4
 		.b1(bit3)
 	);
 		
-	decoder_irrigation decoderI_inst
-		(
-			.bit0(bit2),
-			.bit1(bit3),
-			.a(Ia),
-			.b(Ib),
-			.c(Ic),
-			.d(Id),
-			.e(Ie),
-			.f(If),
-			.g(Ig)
-		
-		);
+	decoder_irrigation decodes_irrigation_condition
+	(
+		bit2,
+		bit3,
+		Ia,
+		Ib,
+		Ic,
+		Id,
+		Ie,
+		If,
+		Ig
+	);
 		
 	Mux_2_1 Mux_A
 	(
