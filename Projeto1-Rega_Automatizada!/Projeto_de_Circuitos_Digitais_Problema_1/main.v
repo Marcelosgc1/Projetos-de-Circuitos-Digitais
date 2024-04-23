@@ -104,13 +104,13 @@ output digit4
 			Cg
 		);
 		
-	encoder_irrigation encoderI_inst
+	encoder_irrigation_condition encodes_irrigation_condition
 	(
-		.sprinkler(ValvulaDeAspersao),
-		.drip(ValvulaDeGotejamento),
-		.aut(Autorizacao),
-		.b0(bit2),
-		.b1(bit3)
+		ValvulaDeAspersao,
+		ValvulaDeGotejamento,
+		Autorizacao,
+		bit2,
+		bit3
 	);
 		
 	decoder_irrigation_condition decodes_irrigation_condition
