@@ -2,7 +2,7 @@
    irrigation is disabled, it displays a segment in the middle of
    a digit, otherwise it displays the irrigation mode being used. */
 
-module decoder_irrigation
+module decoder_irrigation_condition
 (
 	input  bit0_i,
 	input  bit1_i,
