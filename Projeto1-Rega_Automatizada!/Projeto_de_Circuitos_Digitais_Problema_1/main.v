@@ -113,7 +113,7 @@ output digit4
 		.b1(bit3)
 	);
 		
-	decoder_irrigation decodes_irrigation_condition
+	decoder_irrigation_condition decodes_irrigation_condition
 	(
 		bit2,
 		bit3,
