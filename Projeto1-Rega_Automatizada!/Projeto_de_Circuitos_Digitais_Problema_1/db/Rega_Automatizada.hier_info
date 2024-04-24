@@ -9,13 +9,13 @@ seletor => seletor.IN7
 erro << erro.DB_MAX_OUTPUT_PORT_TYPE
 saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
 ValvulaDeEntrada << inlet_valve_trigger:triggers_inlet_valve.port2
-a << Mux_2_1:Mux_A.X
-b << Mux_2_1:Mux_B.X
-c << Mux_2_1:Mux_C.X
-d << Mux_2_1:Mux_D.X
-e << Mux_2_1:Mux_E.X
-f << Mux_2_1:Mux_F.X
-g << Mux_2_1:Mux_G.X
+a << mux_2_1:mux_segment_a.port3
+b << mux_2_1:mux_segment_b.port3
+c << mux_2_1:mux_segment_c.port3
+d << mux_2_1:mux_segment_d.port3
+e << mux_2_1:mux_segment_e.port3
+f << mux_2_1:mux_segment_f.port3
+g << mux_2_1:mux_segment_g.port3
 digit1 << <GND>
 digit2 << <VCC>
 digit3 << <VCC>
@@ -93,92 +93,92 @@ segment_f_o <= <VCC>
 segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|encoder_irrigation:encoderI_inst
-sprinkler => w_aut_inverted_xor_drip.IN0
-sprinkler => comb.IN1
-drip => w_aut_inverted_xor_sprinkler.IN0
-drip => comb.IN1
-aut => w_aut_inverted_xor_sprinkler.IN1
-aut => w_aut_inverted_xor_drip.IN1
-b0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-b1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+|main|encoder_irrigation_condition:encodes_irrigation_condition
+sprinkler_status_i => xnor0.IN0
+sprinkler_status_i => bit1_value.IN1
+drip_status_i => xnor1.IN0
+drip_status_i => bit0_value.IN1
+irrigation_status_i => xnor0.IN1
+irrigation_status_i => xnor1.IN1
+bit0_o <= bit0_value.DB_MAX_OUTPUT_PORT_TYPE
+bit1_o <= bit1_value.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|decoder_irrigation:decoderI_inst
-bit0 => AndA.IN0
-bit0 => AndC.IN0
-bit0 => AndE.IN0
-bit0 => Andf.IN0
-bit0 => Andg.IN0
-bit0 => d.DATAIN
-bit1 => AndA.IN1
-bit1 => AndC.IN1
-bit1 => AndE.IN1
-bit1 => Andf.IN1
-bit1 => Andg.IN1
-bit1 => b.DATAIN
-a <= AndA.DB_MAX_OUTPUT_PORT_TYPE
-b <= bit1.DB_MAX_OUTPUT_PORT_TYPE
-c <= AndC.DB_MAX_OUTPUT_PORT_TYPE
-d <= bit0.DB_MAX_OUTPUT_PORT_TYPE
-e <= AndE.DB_MAX_OUTPUT_PORT_TYPE
-f <= Andf.DB_MAX_OUTPUT_PORT_TYPE
-g <= Andg.DB_MAX_OUTPUT_PORT_TYPE
+|main|decoder_irrigation_condition:decodes_irrigation_condition
+bit0_i => segment_a_status.IN0
+bit0_i => segment_c_status.IN0
+bit0_i => segment_e_status.IN0
+bit0_i => segment_f_status.IN0
+bit0_i => segment_g_status.IN0
+bit0_i => segment_d_o.DATAIN
+bit1_i => segment_a_status.IN1
+bit1_i => segment_c_status.IN1
+bit1_i => segment_e_status.IN1
+bit1_i => segment_f_status.IN1
+bit1_i => segment_g_status.IN1
+bit1_i => segment_b_o.DATAIN
+segment_a_o <= segment_a_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_b_o <= bit1_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_c_o <= segment_c_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_d_o <= bit0_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_e_o <= segment_e_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_f_o <= segment_f_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_A
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_a
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_B
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_b
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_C
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_c
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_D
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_d
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_E
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_e
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_F
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_f
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Mux_2_1:Mux_G
-A => And0.IN0
-B => And1.IN0
-S => And1.IN1
-S => And0.IN1
-X <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|mux_2_1:mux_segment_g
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
 
 

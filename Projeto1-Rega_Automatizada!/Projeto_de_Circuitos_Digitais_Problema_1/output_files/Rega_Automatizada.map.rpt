@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Rega_Automatizada
-Mon Apr 22 02:43:03 2024
+Tue Apr 23 21:47:58 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,12 +41,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Apr 22 02:43:03 2024       ;
+; Analysis & Synthesis Status ; Successful - Tue Apr 23 21:47:58 2024       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; Rega_Automatizada                           ;
 ; Top-level Entity Name       ; main                                        ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 18                                          ;
+; Total logic elements        ; 19                                          ;
 ; Total pins                  ; 21                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -140,24 +140,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v                     ;         ;
-; Mux_2_1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/Mux_2_1.v                  ;         ;
-; encoder_irrigation.v             ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation.v       ;         ;
-; decoder_irrigation.v             ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation.v       ;         ;
-; alarm_trigger.v                  ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v            ;         ;
-; drip_trigger.v                   ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/drip_trigger.v             ;         ;
-; error_detector.v                 ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/error_detector.v           ;         ;
-; inlet_valve_trigger.v            ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/inlet_valve_trigger.v      ;         ;
-; irrigation_trigger.v             ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/irrigation_trigger.v       ;         ;
-; sprinkler_trigger.v              ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v        ;         ;
-; decoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v ;         ;
-; encoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                                                             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v                         ;         ;
+; alarm_trigger.v                  ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v                ;         ;
+; drip_trigger.v                   ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/drip_trigger.v                 ;         ;
+; error_detector.v                 ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/error_detector.v               ;         ;
+; inlet_valve_trigger.v            ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/inlet_valve_trigger.v          ;         ;
+; irrigation_trigger.v             ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/irrigation_trigger.v           ;         ;
+; sprinkler_trigger.v              ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v            ;         ;
+; decoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v     ;         ;
+; encoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v     ;         ;
+; encoder_irrigation_condition.v   ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation_condition.v ;         ;
+; decoder_irrigation_condition.v   ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation_condition.v ;         ;
+; mux_2_1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/mux_2_1.v                      ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -165,20 +165,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Total logic elements                        ; 18     ;
-;     -- Combinational with no register       ; 18     ;
+; Total logic elements                        ; 19     ;
+;     -- Combinational with no register       ; 19     ;
 ;     -- Register only                        ; 0      ;
 ;     -- Combinational with a register        ; 0      ;
 ;                                             ;        ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 8      ;
-;     -- 3 input functions                    ; 9      ;
-;     -- 2 input functions                    ; 1      ;
+;     -- 4 input functions                    ; 9      ;
+;     -- 3 input functions                    ; 7      ;
+;     -- 2 input functions                    ; 3      ;
 ;     -- 1 input functions                    ; 0      ;
 ;     -- 0 input functions                    ; 0      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 18     ;
+;     -- normal mode                          ; 19     ;
 ;     -- arithmetic mode                      ; 0      ;
 ;     -- qfbk mode                            ; 0      ;
 ;     -- register cascade mode                ; 0      ;
@@ -188,31 +188,31 @@ https://fpgasoftware.intel.com/eula.
 ; Total registers                             ; 0      ;
 ; I/O pins                                    ; 21     ;
 ; Maximum fan-out node                        ; middle ;
-; Maximum fan-out                             ; 10     ;
-; Total fan-out                               ; 71     ;
-; Average fan-out                             ; 1.82   ;
+; Maximum fan-out                             ; 12     ;
+; Total fan-out                               ; 73     ;
+; Average fan-out                             ; 1.83   ;
 +---------------------------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
-+--------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node                             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                     ; Entity Name              ; Library Name ;
-+--------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------------------+--------------+
-; |main                                                  ; 18 (0)      ; 0            ; 0          ; 21   ; 0            ; 18 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                                   ; main                     ; work         ;
-;    |Mux_2_1:Mux_A|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_A                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_B|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_B                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_C|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_C                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_D|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_D                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_E|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_E                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_F|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_F                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_G|                                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_G                                     ; Mux_2_1                  ; work         ;
-;    |alarm_trigger:triggers_alarm|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|alarm_trigger:triggers_alarm                      ; alarm_trigger            ; work         ;
-;    |decoder_water_tank_level:decodes_water_tank_level| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|decoder_water_tank_level:decodes_water_tank_level ; decoder_water_tank_level ; work         ;
-;    |encoder_irrigation:encoderI_inst|                  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|encoder_irrigation:encoderI_inst                  ; encoder_irrigation       ; work         ;
-;    |error_detector:detects_error|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|error_detector:detects_error                      ; error_detector           ; work         ;
-;    |inlet_valve_trigger:triggers_inlet_valve|          ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|inlet_valve_trigger:triggers_inlet_valve          ; inlet_valve_trigger      ; work         ;
-+--------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                 ;
++----------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                                     ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                             ; Entity Name                  ; Library Name ;
++----------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+------------------------------+--------------+
+; |main                                                          ; 19 (0)      ; 0            ; 0          ; 21   ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                                           ; main                         ; work         ;
+;    |alarm_trigger:triggers_alarm|                              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|alarm_trigger:triggers_alarm                              ; alarm_trigger                ; work         ;
+;    |decoder_water_tank_level:decodes_water_tank_level|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|decoder_water_tank_level:decodes_water_tank_level         ; decoder_water_tank_level     ; work         ;
+;    |encoder_irrigation_condition:encodes_irrigation_condition| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|encoder_irrigation_condition:encodes_irrigation_condition ; encoder_irrigation_condition ; work         ;
+;    |error_detector:detects_error|                              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|error_detector:detects_error                              ; error_detector               ; work         ;
+;    |inlet_valve_trigger:triggers_inlet_valve|                  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|inlet_valve_trigger:triggers_inlet_valve                  ; inlet_valve_trigger          ; work         ;
+;    |mux_2_1:mux_segment_a|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_a                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_b|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_b                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_c|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_c                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_d|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_d                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_e|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_e                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_f|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_f                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_g|                                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_g                                     ; mux_2_1                      ; work         ;
++----------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -237,18 +237,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 02:42:56 2024
+    Info: Processing started: Tue Apr 23 21:47:47 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Rega_Automatizada -c Rega_Automatizada
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: main File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
-    Info (12023): Found entity 1: Mux_2_1 File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/Mux_2_1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file encoder_irrigation.v
-    Info (12023): Found entity 1: encoder_irrigation File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder_irrigation.v
-    Info (12023): Found entity 1: decoder_irrigation File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alarm_trigger.v
     Info (12023): Found entity 1: alarm_trigger File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file drip_trigger.v
@@ -266,7 +260,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_water_tank_level.v
     Info (12023): Found entity 1: encoder_water_tank_level File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_irrigation_condition.v
-    Info (12023): Found entity 1: new_encoder_irrigation_condition File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation_condition.v Line: 3
+    Info (12023): Found entity 1: encoder_irrigation_condition File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_irrigation_condition.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_irrigation_condition.v
+    Info (12023): Found entity 1: decoder_irrigation_condition File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation_condition.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/mux_2_1.v Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "error_detector" for hierarchy "error_detector:detects_error" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 43
 Info (12128): Elaborating entity "alarm_trigger" for hierarchy "alarm_trigger:triggers_alarm" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 50
@@ -276,22 +274,22 @@ Info (12128): Elaborating entity "sprinkler_trigger" for hierarchy "sprinkler_tr
 Info (12128): Elaborating entity "drip_trigger" for hierarchy "drip_trigger:triggers_drip" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 82
 Info (12128): Elaborating entity "encoder_water_tank_level" for hierarchy "encoder_water_tank_level:encodes_water_tank_level" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 91
 Info (12128): Elaborating entity "decoder_water_tank_level" for hierarchy "decoder_water_tank_level:decodes_water_tank_level" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 105
-Info (12128): Elaborating entity "encoder_irrigation" for hierarchy "encoder_irrigation:encoderI_inst" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 114
-Info (12128): Elaborating entity "decoder_irrigation" for hierarchy "decoder_irrigation:decoderI_inst" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 128
-Info (12128): Elaborating entity "Mux_2_1" for hierarchy "Mux_2_1:Mux_A" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 136
+Info (12128): Elaborating entity "encoder_irrigation_condition" for hierarchy "encoder_irrigation_condition:encodes_irrigation_condition" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 114
+Info (12128): Elaborating entity "decoder_irrigation_condition" for hierarchy "decoder_irrigation_condition:decodes_irrigation_condition" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 127
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:mux_segment_a" File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 135
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "digit1" is stuck at GND File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 19
     Warning (13410): Pin "digit2" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 20
     Warning (13410): Pin "digit3" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 21
     Warning (13410): Pin "digit4" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 23
-Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 18 logic cells
+    Info (21061): Implemented 19 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Mon Apr 22 02:43:03 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 4695 megabytes
+    Info: Processing ended: Tue Apr 23 21:47:58 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 

@@ -92,95 +92,95 @@ output digit4
 		
 		
 	decoder_water_tank_level decodes_water_tank_level
-		(
-			bit0,
-			bit1,
-			Ca,
-			Cb,
-			Cc,
-			Cd,
-			Ce,
-			Cf,
-			Cg
-		);
-		
-	encoder_irrigation encoderI_inst
 	(
-		.sprinkler(ValvulaDeAspersao),
-		.drip(ValvulaDeGotejamento),
-		.aut(Autorizacao),
-		.b0(bit2),
-		.b1(bit3)
+		bit0,
+		bit1,
+		Ca,
+		Cb,
+		Cc,
+		Cd,
+		Ce,
+		Cf,
+		Cg
 	);
 		
-	decoder_irrigation decoderI_inst
-		(
-			.bit0(bit2),
-			.bit1(bit3),
-			.a(Ia),
-			.b(Ib),
-			.c(Ic),
-			.d(Id),
-			.e(Ie),
-			.f(If),
-			.g(Ig)
-		
-		);
-		
-	Mux_2_1 Mux_A
+	encoder_irrigation_condition encodes_irrigation_condition
 	(
-		.A(Ca),
-		.B(Ia),
-		.S(seletor),
-		.X(a)
+		ValvulaDeAspersao,
+		ValvulaDeGotejamento,
+		Autorizacao,
+		bit2,
+		bit3
 	);
-	
-	Mux_2_1 Mux_B
+		
+	decoder_irrigation_condition decodes_irrigation_condition
 	(
-		.A(Cb),
-		.B(Ib),
-		.S(seletor),
-		.X(b)
+		bit2,
+		bit3,
+		Ia,
+		Ib,
+		Ic,
+		Id,
+		Ie,
+		If,
+		Ig
+	);
+		
+	mux_2_1 mux_segment_a
+	(
+		Ca,
+		Ia,
+		seletor,
+		a
 	);
 	
-	Mux_2_1 Mux_C
+	mux_2_1 mux_segment_b
 	(
-		.A(Cc),
-		.B(Ic),
-		.S(seletor),
-		.X(c)
+		Cb,
+		Ib,
+		seletor,
+		b
+	);
+	
+	mux_2_1 mux_segment_c
+	(
+		Cc,
+		Ic,
+		seletor,
+		c
 	);
 
-	Mux_2_1 Mux_D
+	mux_2_1 mux_segment_d
 	(
-		.A(Cd),
-		.B(Id),
-		.S(seletor),
-		.X(d)
+		Cd,
+		Id,
+		seletor,
+		d
 	);
 	
-	Mux_2_1 Mux_E
+	mux_2_1 mux_segment_e
 	(
-		.A(Ce),
-		.B(Ie),
-		.S(seletor),
-		.X(e)
+		Ce,
+		Ie,
+		seletor,
+		e
 	);
 	
-	Mux_2_1 Mux_F
+	mux_2_1 mux_segment_f
 	(
-		.A(Cf),
-		.B(If),
-		.S(seletor),
-		.X(f)
+		Cf,
+		If,
+		seletor,
+		f
 	);
 	
-	Mux_2_1 Mux_G
+	mux_2_1 mux_segment_g
 	(
-		.A(Cg),
-		.B(Ig),
-		.S(seletor),
-		.X(g)
+		Cg,
+		Ig,
+		seletor,
+		g
 	);
 	
-endmodule	
+endmodule
+	

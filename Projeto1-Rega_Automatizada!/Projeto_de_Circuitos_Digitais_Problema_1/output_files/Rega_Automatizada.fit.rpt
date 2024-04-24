@@ -1,5 +1,5 @@
 Fitter report for Rega_Automatizada
-Mon Apr 22 02:43:05 2024
+Tue Apr 23 21:48:00 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -53,14 +53,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Apr 22 02:43:05 2024       ;
+; Fitter Status         ; Successful - Tue Apr 23 21:48:00 2024       ;
 ; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name         ; Rega_Automatizada                           ;
 ; Top-level Entity Name ; main                                        ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 18 / 240 ( 8 % )                            ;
+; Total logic elements  ; 19 / 240 ( 8 % )                            ;
 ; Total pins            ; 21 / 80 ( 26 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
@@ -143,20 +143,20 @@ The pin-out file can be found in C:/Users/marys/OneDrive/Documentos/Circuitos Di
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Total logic elements                        ; 18 / 240 ( 8 % )   ;
-;     -- Combinational with no register       ; 18                 ;
+; Total logic elements                        ; 19 / 240 ( 8 % )   ;
+;     -- Combinational with no register       ; 19                 ;
 ;     -- Register only                        ; 0                  ;
 ;     -- Combinational with a register        ; 0                  ;
 ;                                             ;                    ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 8                  ;
-;     -- 3 input functions                    ; 9                  ;
-;     -- 2 input functions                    ; 1                  ;
+;     -- 4 input functions                    ; 9                  ;
+;     -- 3 input functions                    ; 7                  ;
+;     -- 2 input functions                    ; 3                  ;
 ;     -- 1 input functions                    ; 0                  ;
 ;     -- 0 input functions                    ; 0                  ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 18                 ;
+;     -- normal mode                          ; 19                 ;
 ;     -- arithmetic mode                      ; 0                  ;
 ;     -- qfbk mode                            ; 0                  ;
 ;     -- register cascade mode                ; 0                  ;
@@ -178,12 +178,12 @@ The pin-out file can be found in C:/Users/marys/OneDrive/Documentos/Circuitos Di
 ; Global signals                              ; 0                  ;
 ;     -- Global clocks                        ; 0 / 4 ( 0 % )      ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 2.4% / 2.3% / 2.4% ;
-; Peak interconnect usage (total/H/V)         ; 2.4% / 2.3% / 2.4% ;
-; Maximum fan-out                             ; 10                 ;
-; Highest non-global fan-out                  ; 10                 ;
-; Total fan-out                               ; 71                 ;
-; Average fan-out                             ; 1.82               ;
+; Average interconnect usage (total/H/V)      ; 2.5% / 2.4% / 2.5% ;
+; Peak interconnect usage (total/H/V)         ; 2.5% / 2.4% / 2.5% ;
+; Maximum fan-out                             ; 12                 ;
+; Highest non-global fan-out                  ; 12                 ;
+; Total fan-out                               ; 73                 ;
+; Average fan-out                             ; 1.83               ;
 +---------------------------------------------+--------------------+
 
 
@@ -192,13 +192,13 @@ The pin-out file can be found in C:/Users/marys/OneDrive/Documentos/Circuitos Di
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; high          ; 38    ; 1        ; 4            ; 0            ; 0           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; low           ; 42    ; 1        ; 5            ; 0            ; 0           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; middle        ; 40    ; 1        ; 5            ; 0            ; 2           ; 10                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; seletor       ; 34    ; 1        ; 3            ; 0            ; 1           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; high          ; 38    ; 1        ; 4            ; 0            ; 0           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; low           ; 42    ; 1        ; 5            ; 0            ; 0           ; 10                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; middle        ; 40    ; 1        ; 5            ; 0            ; 2           ; 12                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; seletor       ; 34    ; 1        ; 3            ; 0            ; 1           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; temperatura   ; 35    ; 1        ; 3            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; umidadeDoAr   ; 33    ; 1        ; 3            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; umidadeDoSolo ; 30    ; 1        ; 3            ; 0            ; 3           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; umidadeDoSolo ; 30    ; 1        ; 3            ; 0            ; 3           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -217,7 +217,7 @@ The pin-out file can be found in C:/Users/marys/OneDrive/Documentos/Circuitos Di
 ; digit3           ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; digit4           ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; e                ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; erro             ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; erro             ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; f                ; 92    ; 2        ; 3            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; g                ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; saidaDoAlarme    ; 86    ; 2        ; 5            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -359,25 +359,25 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
-+--------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node                             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                     ; Entity Name              ; Library Name ;
-+--------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------------------+--------------+
-; |main                                                  ; 18 (0)      ; 0            ; 0          ; 21   ; 0            ; 18 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                                   ; main                     ; work         ;
-;    |Mux_2_1:Mux_A|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_A                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_B|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_B                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_C|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_C                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_D|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_D                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_E|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_E                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_F|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_F                                     ; Mux_2_1                  ; work         ;
-;    |Mux_2_1:Mux_G|                                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|Mux_2_1:Mux_G                                     ; Mux_2_1                  ; work         ;
-;    |alarm_trigger:triggers_alarm|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|alarm_trigger:triggers_alarm                      ; alarm_trigger            ; work         ;
-;    |decoder_water_tank_level:decodes_water_tank_level| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|decoder_water_tank_level:decodes_water_tank_level ; decoder_water_tank_level ; work         ;
-;    |encoder_irrigation:encoderI_inst|                  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|encoder_irrigation:encoderI_inst                  ; encoder_irrigation       ; work         ;
-;    |error_detector:detects_error|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|error_detector:detects_error                      ; error_detector           ; work         ;
-;    |inlet_valve_trigger:triggers_inlet_valve|          ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|inlet_valve_trigger:triggers_inlet_valve          ; inlet_valve_trigger      ; work         ;
-+--------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
++----------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                                     ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                             ; Entity Name                  ; Library Name ;
++----------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+------------------------------+--------------+
+; |main                                                          ; 19 (0)      ; 0            ; 0          ; 21   ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                                           ; main                         ; work         ;
+;    |alarm_trigger:triggers_alarm|                              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|alarm_trigger:triggers_alarm                              ; alarm_trigger                ; work         ;
+;    |decoder_water_tank_level:decodes_water_tank_level|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|decoder_water_tank_level:decodes_water_tank_level         ; decoder_water_tank_level     ; work         ;
+;    |encoder_irrigation_condition:encodes_irrigation_condition| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|encoder_irrigation_condition:encodes_irrigation_condition ; encoder_irrigation_condition ; work         ;
+;    |error_detector:detects_error|                              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|error_detector:detects_error                              ; error_detector               ; work         ;
+;    |inlet_valve_trigger:triggers_inlet_valve|                  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|inlet_valve_trigger:triggers_inlet_valve                  ; inlet_valve_trigger          ; work         ;
+;    |mux_2_1:mux_segment_a|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_a                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_b|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_b                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_c|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_c                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_d|                                     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_d                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_e|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_e                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_f|                                     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_f                                     ; mux_2_1                      ; work         ;
+;    |mux_2_1:mux_segment_g|                                     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux_2_1:mux_segment_g                                     ; mux_2_1                      ; work         ;
++----------------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -415,12 +415,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------+
 ; Routing Resource Type ; Usage             ;
 +-----------------------+-------------------+
-; C4s                   ; 17 / 784 ( 2 % )  ;
+; C4s                   ; 18 / 784 ( 2 % )  ;
 ; Direct links          ; 2 / 888 ( < 1 % ) ;
 ; Global clocks         ; 0 / 4 ( 0 % )     ;
 ; LAB clocks            ; 0 / 32 ( 0 % )    ;
 ; LUT chains            ; 2 / 216 ( < 1 % ) ;
-; Local interconnects   ; 23 / 888 ( 3 % )  ;
+; Local interconnects   ; 24 / 888 ( 3 % )  ;
 ; R4s                   ; 13 / 704 ( 2 % )  ;
 +-----------------------+-------------------+
 
@@ -428,7 +428,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 9.00) ; Number of LABs  (Total = 2) ;
+; Number of Logic Elements  (Average = 9.50) ; Number of LABs  (Total = 2) ;
 +--------------------------------------------+-----------------------------+
 ; 1                                          ; 0                           ;
 ; 2                                          ; 0                           ;
@@ -438,15 +438,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 6                                          ; 0                           ;
 ; 7                                          ; 0                           ;
 ; 8                                          ; 0                           ;
-; 9                                          ; 2                           ;
-; 10                                         ; 0                           ;
+; 9                                          ; 1                           ;
+; 10                                         ; 1                           ;
 +--------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 9.00) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced  (Average = 9.50) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -457,29 +457,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
-; 9                                           ; 2                           ;
+; 9                                           ; 1                           ;
+; 10                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.00) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced Out  (Average = 5.50) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
-; 4                                               ; 0                           ;
+; 4                                               ; 1                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 2                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 7.00) ; Number of LABs  (Total = 2) ;
+; Number of Distinct Inputs  (Average = 6.50) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -487,8 +489,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 2                           ;
+; 6                                           ; 1                           ;
+; 7                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -550,13 +552,13 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/marys/OneDrive/Documentos/Circuitos Digitais/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/output_files/Rega_Automatizada.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 5329 megabytes
-    Info: Processing ended: Mon Apr 22 02:43:05 2024
+    Info: Processing ended: Tue Apr 23 21:48:00 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
