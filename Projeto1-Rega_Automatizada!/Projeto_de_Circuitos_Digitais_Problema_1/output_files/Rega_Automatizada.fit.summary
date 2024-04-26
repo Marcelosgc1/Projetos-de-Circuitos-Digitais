@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Apr 23 21:48:00 2024
+Fitter Status : Successful - Fri Apr 26 00:54:52 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Rega_Automatizada
 Top-level Entity Name : main
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 19 / 240 ( 8 % )
+Total logic elements : 16 / 240 ( 7 % )
 Total pins : 21 / 80 ( 26 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -1,25 +1,25 @@
 |main
-high => high.IN3
-middle => middle.IN4
-low => low.IN3
-umidadeDoSolo => umidadeDoSolo.IN1
-umidadeDoAr => umidadeDoAr.IN2
-temperatura => temperatura.IN2
-seletor => seletor.IN7
-erro << erro.DB_MAX_OUTPUT_PORT_TYPE
-saidaDoAlarme << saidaDoAlarme.DB_MAX_OUTPUT_PORT_TYPE
-ValvulaDeEntrada << inlet_valve_trigger:triggers_inlet_valve.port2
-a << mux_2_1:mux_segment_a.port3
-b << mux_2_1:mux_segment_b.port3
-c << mux_2_1:mux_segment_c.port3
-d << mux_2_1:mux_segment_d.port3
-e << mux_2_1:mux_segment_e.port3
-f << mux_2_1:mux_segment_f.port3
-g << mux_2_1:mux_segment_g.port3
-digit1 << <GND>
-digit2 << <VCC>
-digit3 << <VCC>
-digit4 << <VCC>
+high_level_indicator_i => high_level_indicator_i.IN3
+middle_level_indicator_i => middle_level_indicator_i.IN4
+low_level_indicator_i => low_level_indicator_i.IN3
+soil_humidity_i => soil_humidity_i.IN1
+air_humidity_i => air_humidity_i.IN2
+temperature_i => temperature_i.IN2
+selector_i => selector_i.IN7
+error_indicator_o <= error_indicator_o.DB_MAX_OUTPUT_PORT_TYPE
+alarm_state_o <= alarm_state_o.DB_MAX_OUTPUT_PORT_TYPE
+inlet_valve_o <= inlet_valve_trigger:triggers_inlet_valve.port2
+segment_a_o <= mux_2_1:mux_segment_a.port3
+segment_b_o <= mux_2_1:mux_segment_b.port3
+segment_c_o <= mux_2_1:mux_segment_c.port3
+segment_d_o <= mux_2_1:mux_segment_d.port3
+segment_e_o <= mux_2_1:mux_segment_e.port3
+segment_f_o <= mux_2_1:mux_segment_f.port3
+segment_g_o <= mux_2_1:mux_segment_g.port3
+digit1_o <= <GND>
+digit2_o <= <VCC>
+digit3_o <= <VCC>
+digit4_o <= <VCC>
 
 
 |main|error_detector:detects_error
@@ -93,34 +93,23 @@ segment_f_o <= <VCC>
 segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|encoder_irrigation_condition:encodes_irrigation_condition
-sprinkler_status_i => xnor0.IN0
-sprinkler_status_i => bit1_value.IN1
-drip_status_i => xnor1.IN0
-drip_status_i => bit0_value.IN1
-irrigation_status_i => xnor0.IN1
-irrigation_status_i => xnor1.IN1
-bit0_o <= bit0_value.DB_MAX_OUTPUT_PORT_TYPE
-bit1_o <= bit1_value.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |main|decoder_irrigation_condition:decodes_irrigation_condition
-bit0_i => segment_a_status.IN0
-bit0_i => segment_c_status.IN0
-bit0_i => segment_e_status.IN0
-bit0_i => segment_f_status.IN0
-bit0_i => segment_g_status.IN0
-bit0_i => segment_d_o.DATAIN
-bit1_i => segment_a_status.IN1
-bit1_i => segment_c_status.IN1
-bit1_i => segment_e_status.IN1
-bit1_i => segment_f_status.IN1
-bit1_i => segment_g_status.IN1
-bit1_i => segment_b_o.DATAIN
+sprinkler_status_i => segment_a_status.IN0
+sprinkler_status_i => segment_c_status.IN0
+sprinkler_status_i => segment_e_status.IN0
+sprinkler_status_i => segment_f_status.IN0
+sprinkler_status_i => segment_g_status.IN0
+sprinkler_status_i => segment_b_o.DATAIN
+drip_status_i => segment_a_status.IN1
+drip_status_i => segment_c_status.IN1
+drip_status_i => segment_e_status.IN1
+drip_status_i => segment_f_status.IN1
+drip_status_i => segment_g_status.IN1
+drip_status_i => segment_d_o.DATAIN
 segment_a_o <= segment_a_status.DB_MAX_OUTPUT_PORT_TYPE
-segment_b_o <= bit1_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_b_o <= sprinkler_status_i.DB_MAX_OUTPUT_PORT_TYPE
 segment_c_o <= segment_c_status.DB_MAX_OUTPUT_PORT_TYPE
-segment_d_o <= bit0_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_d_o <= drip_status_i.DB_MAX_OUTPUT_PORT_TYPE
 segment_e_o <= segment_e_status.DB_MAX_OUTPUT_PORT_TYPE
 segment_f_o <= segment_f_status.DB_MAX_OUTPUT_PORT_TYPE
 segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
