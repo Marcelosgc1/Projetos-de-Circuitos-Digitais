@@ -4,8 +4,8 @@
 
 module decoder_irrigation_condition
 (
-	input  bit0_i,
-	input  bit1_i,
+	input  sprinkler_status_i,
+	input  drip_status_i,
 	output segment_a_o,
 	output segment_b_o,
 	output segment_c_o,
@@ -18,16 +18,16 @@ module decoder_irrigation_condition
 	// Declaring wires
 	wire w0;
 	
-	// Inverting the LSB input from irrigation encoder
-	not inv0(w0, bit0_i);
+	// Inverting sprinkler output
+	not inv0(w0, sprinkler_status_i);
 	
 	// Using several AND gates to activate each segment correctly
-	and segment_a_status(segment_a_o, bit0_i, bit1_i);
-	and segment_b_status(segment_b_o, bit1_i, bit1_i);
-	and segment_c_status(segment_c_o, bit0_i, bit1_i);
-	and segment_d_status(segment_d_o, bit0_i, bit0_i);
-	and segment_e_status(segment_e_o, bit0_i, bit1_i);
-	and segment_f_status(segment_f_o, bit0_i, bit1_i);
-	and segment_g_status(segment_g_o, w0, bit1_i);	
+	nor segment_a_status(segment_a_o, sprinkler_status_i, drip_status_i);
+	not segment_b_status(segment_b_o, sprinkler_status_i);
+	nor segment_c_status(segment_c_o, sprinkler_status_i, drip_status_i);
+	not segment_d_status(segment_d_o, drip_status_i);
+	nor segment_e_status(segment_e_o, sprinkler_status_i, drip_status_i);
+	nor segment_f_status(segment_f_o, sprinkler_status_i, drip_status_i);
+	and segment_g_status(segment_g_o, w0, drip_status_i);	
 	
 endmodule
