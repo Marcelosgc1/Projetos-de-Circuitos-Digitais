@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Rega_Automatizada
-Fri Apr 26 00:54:50 2024
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fri Apr 26 20:34:04 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,16 +33,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Apr 26 00:54:50 2024       ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status ; Successful - Fri Apr 26 20:34:04 2024       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Rega_Automatizada                           ;
 ; Top-level Entity Name       ; main                                        ;
 ; Family                      ; MAX II                                      ;
@@ -129,7 +128,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -140,23 +139,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                                          ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v                         ;         ;
-; alarm_trigger.v                  ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v                ;         ;
-; drip_trigger.v                   ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/drip_trigger.v                 ;         ;
-; error_detector.v                 ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/error_detector.v               ;         ;
-; inlet_valve_trigger.v            ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/inlet_valve_trigger.v          ;         ;
-; irrigation_trigger.v             ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/irrigation_trigger.v           ;         ;
-; sprinkler_trigger.v              ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v            ;         ;
-; decoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v     ;         ;
-; encoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v     ;         ;
-; decoder_irrigation_condition.v   ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation_condition.v ;         ;
-; mux_2_1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/mux_2_1.v                      ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                                                                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v                         ;         ;
+; alarm_trigger.v                  ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v                ;         ;
+; drip_trigger.v                   ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/drip_trigger.v                 ;         ;
+; error_detector.v                 ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/error_detector.v               ;         ;
+; inlet_valve_trigger.v            ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/inlet_valve_trigger.v          ;         ;
+; irrigation_trigger.v             ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/irrigation_trigger.v           ;         ;
+; sprinkler_trigger.v              ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v            ;         ;
+; decoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v     ;         ;
+; encoder_water_tank_level.v       ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v     ;         ;
+; decoder_irrigation_condition.v   ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation_condition.v ;         ;
+; mux_2_1.v                        ; yes             ; User Verilog HDL File  ; F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/mux_2_1.v                      ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -234,57 +233,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 26 00:54:40 2024
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Apr 26 20:33:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Rega_Automatizada -c Rega_Automatizada
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 4
+    Info (12023): Found entity 1: main File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file alarm_trigger.v
-    Info (12023): Found entity 1: alarm_trigger File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v Line: 4
+    Info (12023): Found entity 1: alarm_trigger File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/alarm_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file drip_trigger.v
-    Info (12023): Found entity 1: drip_trigger File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/drip_trigger.v Line: 4
+    Info (12023): Found entity 1: drip_trigger File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/drip_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file error_detector.v
-    Info (12023): Found entity 1: error_detector File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/error_detector.v Line: 3
+    Info (12023): Found entity 1: error_detector File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/error_detector.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file inlet_valve_trigger.v
-    Info (12023): Found entity 1: inlet_valve_trigger File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/inlet_valve_trigger.v Line: 4
+    Info (12023): Found entity 1: inlet_valve_trigger File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/inlet_valve_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file irrigation_trigger.v
-    Info (12023): Found entity 1: irrigation_trigger File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/irrigation_trigger.v Line: 4
+    Info (12023): Found entity 1: irrigation_trigger File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/irrigation_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file sprinkler_trigger.v
-    Info (12023): Found entity 1: sprinkler_trigger File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v Line: 4
+    Info (12023): Found entity 1: sprinkler_trigger File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/sprinkler_trigger.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_water_tank_level.v
-    Info (12023): Found entity 1: decoder_water_tank_level File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v Line: 4
+    Info (12023): Found entity 1: decoder_water_tank_level File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_water_tank_level.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file encoder_water_tank_level.v
-    Info (12023): Found entity 1: encoder_water_tank_level File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v Line: 4
+    Info (12023): Found entity 1: encoder_water_tank_level File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/encoder_water_tank_level.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_irrigation_condition.v
-    Info (12023): Found entity 1: decoder_irrigation_condition File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation_condition.v Line: 5
+    Info (12023): Found entity 1: decoder_irrigation_condition File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/decoder_irrigation_condition.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
-    Info (12023): Found entity 1: mux_2_1 File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/mux_2_1.v Line: 4
+    Info (12023): Found entity 1: mux_2_1 File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/mux_2_1.v Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "error_detector" for hierarchy "error_detector:detects_error" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 54
-Info (12128): Elaborating entity "alarm_trigger" for hierarchy "alarm_trigger:triggers_alarm" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 60
-Info (12128): Elaborating entity "inlet_valve_trigger" for hierarchy "inlet_valve_trigger:triggers_inlet_valve" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 66
-Info (12128): Elaborating entity "irrigation_trigger" for hierarchy "irrigation_trigger:triggers_irrigation" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 72
-Info (12128): Elaborating entity "sprinkler_trigger" for hierarchy "sprinkler_trigger:triggers_sprinkler" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 80
-Info (12128): Elaborating entity "drip_trigger" for hierarchy "drip_trigger:triggers_drip" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 88
-Info (12128): Elaborating entity "encoder_water_tank_level" for hierarchy "encoder_water_tank_level:encodes_water_tank_level" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 96
-Info (12128): Elaborating entity "decoder_water_tank_level" for hierarchy "decoder_water_tank_level:decodes_water_tank_level" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 108
-Info (12128): Elaborating entity "decoder_irrigation_condition" for hierarchy "decoder_irrigation_condition:decodes_irrigation_condition" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 120
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:mux_segment_a" File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 127
+Info (12128): Elaborating entity "error_detector" for hierarchy "error_detector:detects_error" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 54
+Info (12128): Elaborating entity "alarm_trigger" for hierarchy "alarm_trigger:triggers_alarm" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 60
+Info (12128): Elaborating entity "inlet_valve_trigger" for hierarchy "inlet_valve_trigger:triggers_inlet_valve" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 66
+Info (12128): Elaborating entity "irrigation_trigger" for hierarchy "irrigation_trigger:triggers_irrigation" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 72
+Info (12128): Elaborating entity "sprinkler_trigger" for hierarchy "sprinkler_trigger:triggers_sprinkler" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 80
+Info (12128): Elaborating entity "drip_trigger" for hierarchy "drip_trigger:triggers_drip" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 88
+Info (12128): Elaborating entity "encoder_water_tank_level" for hierarchy "encoder_water_tank_level:encodes_water_tank_level" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 96
+Info (12128): Elaborating entity "decoder_water_tank_level" for hierarchy "decoder_water_tank_level:decodes_water_tank_level" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 108
+Info (12128): Elaborating entity "decoder_irrigation_condition" for hierarchy "decoder_irrigation_condition:decodes_irrigation_condition" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 120
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:mux_segment_a" File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 127
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "digit1_o" is stuck at GND File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 23
-    Warning (13410): Pin "digit2_o" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 24
-    Warning (13410): Pin "digit3_o" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 25
-    Warning (13410): Pin "digit4_o" is stuck at VCC File: C:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 27
+    Warning (13410): Pin "digit1_o" is stuck at GND File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 23
+    Warning (13410): Pin "digit2_o" is stuck at VCC File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 24
+    Warning (13410): Pin "digit3_o" is stuck at VCC File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 25
+    Warning (13410): Pin "digit4_o" is stuck at VCC File: F:/Users/marce/Downloads/Projetos-de-Circuitos-Digitais-main/Projetos-de-Circuitos-Digitais-main/Projeto1-Rega_Automatizada!/Projeto_de_Circuitos_Digitais_Problema_1/main.v Line: 27
 Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 16 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4705 megabytes
-    Info: Processing ended: Fri Apr 26 00:54:50 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4703 megabytes
+    Info: Processing ended: Fri Apr 26 20:34:04 2024
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:35
 
 

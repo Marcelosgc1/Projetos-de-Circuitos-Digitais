@@ -6,20 +6,20 @@ soil_humidity_i => soil_humidity_i.IN1
 air_humidity_i => air_humidity_i.IN2
 temperature_i => temperature_i.IN2
 selector_i => selector_i.IN7
-error_indicator_o <= error_indicator_o.DB_MAX_OUTPUT_PORT_TYPE
-alarm_state_o <= alarm_state_o.DB_MAX_OUTPUT_PORT_TYPE
-inlet_valve_o <= inlet_valve_trigger:triggers_inlet_valve.port2
-segment_a_o <= mux_2_1:mux_segment_a.port3
-segment_b_o <= mux_2_1:mux_segment_b.port3
-segment_c_o <= mux_2_1:mux_segment_c.port3
-segment_d_o <= mux_2_1:mux_segment_d.port3
-segment_e_o <= mux_2_1:mux_segment_e.port3
-segment_f_o <= mux_2_1:mux_segment_f.port3
-segment_g_o <= mux_2_1:mux_segment_g.port3
-digit1_o <= <GND>
-digit2_o <= <VCC>
-digit3_o <= <VCC>
-digit4_o <= <VCC>
+error_indicator_o << error_indicator_o.DB_MAX_OUTPUT_PORT_TYPE
+alarm_state_o << alarm_state_o.DB_MAX_OUTPUT_PORT_TYPE
+inlet_valve_o << inlet_valve_trigger:triggers_inlet_valve.port2
+segment_a_o << mux_2_1:mux_segment_a.port3
+segment_b_o << mux_2_1:mux_segment_b.port3
+segment_c_o << mux_2_1:mux_segment_c.port3
+segment_d_o << mux_2_1:mux_segment_d.port3
+segment_e_o << mux_2_1:mux_segment_e.port3
+segment_f_o << mux_2_1:mux_segment_f.port3
+segment_g_o << mux_2_1:mux_segment_g.port3
+digit1_o << <GND>
+digit2_o << <VCC>
+digit3_o << <VCC>
+digit4_o << <VCC>
 
 
 |main|error_detector:detects_error
