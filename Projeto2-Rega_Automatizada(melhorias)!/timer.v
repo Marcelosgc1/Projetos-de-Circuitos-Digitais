@@ -1,3 +1,3 @@
-module stopwatch();
+module timer();
 
 endmodule
