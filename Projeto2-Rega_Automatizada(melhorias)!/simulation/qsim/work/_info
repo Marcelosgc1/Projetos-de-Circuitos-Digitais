@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/marys/OneDrive/Documentos/Projetos-de-Circuitos-Digitais/Projeto2-Rega_Automatizada(melhorias)!/simulation/qsim
+v_60_seconds_timer
+!s110 1715210843
+!i10b 1
+!s100 X]OHb8n5b@_09bjVAW?>R1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?<HTD^:bZ3:cNa3S_H1g93
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1715210843
+8main.vo
+Fmain.vo
+!i122 10
+L0 32 2755
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1715210843.000000
+!s107 main.vo|
+!s90 -work|work|main.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@_60_seconds_timer
+v_60_seconds_timer_vlg_vec_tst
+!s110 1715210844
+!i10b 1
+!s100 jjN1GUMe9K5NA@SVa9@ee3
+R1
+I2k>UTS=oz3m60R]YSi^WZ0
+R2
+R0
+w1715210842
+8_60_seconds_timer.vwf.vt
+F_60_seconds_timer.vwf.vt
+!i122 11
+L0 30 34
+R3
+r1
+!s85 0
+31
+!s108 1715210844.000000
+!s107 _60_seconds_timer.vwf.vt|
+!s90 -work|work|_60_seconds_timer.vwf.vt|
+!i113 1
+R4
+R5
+n@_60_seconds_timer_vlg_vec_tst
