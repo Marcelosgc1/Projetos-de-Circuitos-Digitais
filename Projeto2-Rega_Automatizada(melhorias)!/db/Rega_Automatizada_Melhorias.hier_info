@@ -1,0 +1,1181 @@
+|main
+high_level_indicator_i => high_level_indicator_i.IN4
+middle_level_indicator_i => middle_level_indicator_i.IN5
+low_level_indicator_i => low_level_indicator_i.IN3
+soil_humidity_i => soil_humidity_i.IN1
+air_humidity_i => air_humidity_i.IN3
+temperature_i => temperature_i.IN3
+selector_i => selector_i.IN7
+clk => clk.IN1
+b => b.IN1
+error_indicator_o <= error_indicator_o.DB_MAX_OUTPUT_PORT_TYPE
+alarm_state_o <= alarm_state_o.DB_MAX_OUTPUT_PORT_TYPE
+inlet_valve_o <= inlet_valve_trigger:triggers_inlet_valve.port2
+mostrador[0] <= timer:comb_7.port10
+mostrador[1] <= timer:comb_7.port10
+mostrador[2] <= timer:comb_7.port10
+mostrador[3] <= timer:comb_7.port10
+mostrador[4] <= timer:comb_7.port10
+mostrador[5] <= timer:comb_7.port10
+mostrador[6] <= timer:comb_7.port10
+digit1_o <= timer:comb_7.port12
+digit2_o <= timer:comb_7.port13
+digit3_o <= timer:comb_7.port14
+digit4_o <= timer:comb_7.port15
+init <= init.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|error_detector:detects_error
+high_level_indicator_i => and0.IN0
+medium_level_indicator_i => and1.IN0
+medium_level_indicator_i => and0.IN1
+low_level_indicator_i => and1.IN1
+error_indicator_o <= error_checking_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|alarm_trigger:triggers_alarm
+low_level_indicator_i => alarm_activation_result.IN0
+error_indicator_i => alarm_activation_result.IN1
+alarm_state_o <= alarm_activation_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|inlet_valve_trigger:triggers_inlet_valve
+high_level_indicator_i => valve_activation_result.IN0
+error_indicator_i => valve_activation_result.IN1
+valve_state_o <= valve_activation_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|irrigation_trigger:triggers_irrigation
+alarm_state_i => irrigiration_activation_result.IN0
+soil_humidity_i => irrigiration_activation_result.IN1
+irrigation_state_o <= irrigiration_activation_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|sprinkler_trigger:triggers_sprinkler
+medium_level_indicator_i => and0.IN0
+irrigation_state_i => sprinkler_activaction_result.IN1
+temperature_i => and0.IN1
+air_humidity_i => or0.IN1
+sprinker_state_o <= sprinkler_activaction_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|drip_trigger:triggers_drip
+medium_level_indicator_i => or0.IN0
+irrigation_state_i => drip_activation_result.IN1
+temperature_i => or0.IN1
+air_humidity_i => drip_activation_result.IN2
+drip_state_o <= drip_activation_result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|encoder_water_tank_level:encodes_water_tank_level
+high_level_indicator_i => xnor0.IN0
+medium_level_indicator_i => xnor0.IN1
+medium_level_indicator_i => bit1_value.IN0
+low_level_indicator_i => bit0_value.IN1
+low_level_indicator_i => bit1_value.IN1
+bit0_o <= bit0_value.DB_MAX_OUTPUT_PORT_TYPE
+bit1_o <= bit1_value.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decoder_water_tank_level:decodes_water_tank_level
+bit0_i => segment_b_status.IN0
+bit0_i => segment_e_status.IN0
+bit0_i => segment_g_status.IN0
+bit0_i => segment_c_o.DATAIN
+bit1_i => segment_b_status.IN1
+bit1_i => segment_e_status.IN1
+bit1_i => segment_g_status.IN1
+bit1_i => segment_a_o.DATAIN
+bit1_i => segment_d_o.DATAIN
+segment_a_o <= bit1_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_b_o <= segment_b_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_c_o <= bit0_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_d_o <= bit1_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_e_o <= segment_e_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_f_o <= <VCC>
+segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decoder_irrigation_condition:decodes_irrigation_condition
+sprinkler_status_i => segment_a_status.IN0
+sprinkler_status_i => segment_c_status.IN0
+sprinkler_status_i => segment_e_status.IN0
+sprinkler_status_i => segment_f_status.IN0
+sprinkler_status_i => segment_g_status.IN0
+sprinkler_status_i => segment_b_o.DATAIN
+drip_status_i => segment_a_status.IN1
+drip_status_i => segment_c_status.IN1
+drip_status_i => segment_e_status.IN1
+drip_status_i => segment_f_status.IN1
+drip_status_i => segment_g_status.IN1
+drip_status_i => segment_d_o.DATAIN
+segment_a_o <= segment_a_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_b_o <= sprinkler_status_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_c_o <= segment_c_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_d_o <= drip_status_i.DB_MAX_OUTPUT_PORT_TYPE
+segment_e_o <= segment_e_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_f_o <= segment_f_status.DB_MAX_OUTPUT_PORT_TYPE
+segment_g_o <= segment_g_status.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_a
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_b
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_c
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_d
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_e
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_f
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_2_1:mux_segment_g
+segment_water_tank_level_i => and0.IN0
+segment_irrigation_condition_i => and1.IN0
+selector_i => and1.IN1
+selector_i => and0.IN1
+segment_value_o <= input_selected.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4
+t => t.IN26
+clear => clear.IN24
+_50MHz_clk => inv_50MHz_clk.IN1
+_1Hz_frequency <= t_flip_flop:t_ff25.port3
+frequencies[0] <= t_flip_flop:t_ff15.port3
+frequencies[1] <= t_flip_flop:t_ff16.port3
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff0
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff1
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff2
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff3
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff4
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff5
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff6
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff7
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff8
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff9
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff10
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff11
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff12
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff13
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff14
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff15
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff16
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff17
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff18
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff19
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff20
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff21
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff22
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff23
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff24
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|frequency_divider:comb_4|t_flip_flop:t_ff25
+t => q~reg0.ENA
+clk => q~reg0.CLK
+clear => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|kronos:comb_5
+T => w0.IN0
+T => WideAnd1.IN0
+T => w7.IN0
+T => w8.IN0
+Ua => w1.IN1
+Ua => WideAnd0.IN1
+Ua => WideAnd1.IN1
+Ua => w3.IN0
+Ua => aux1.IN0
+Ua => w5.IN0
+Ua => aux3.IN0
+Ua => w7.IN1
+Ua => w8.IN1
+H => w3.IN1
+H => WideAnd0.IN2
+H => WideAnd1.IN2
+H => w0.IN1
+H => aux1.IN1
+H => w5.IN1
+H => aux3.IN1
+H => WideAnd2.IN2
+H => WideAnd3.IN2
+M => TH.IN0
+Error => TH.IN1
+PresetUS[0] <= <GND>
+PresetUS[1] <= <GND>
+PresetUS[2] <= <GND>
+PresetUS[3] <= <GND>
+PresetDS[0] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+PresetDS[1] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
+PresetDS[2] <= <GND>
+PresetDS[3] <= <GND>
+PresetUM[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+PresetUM[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+PresetUM[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+PresetUM[3] <= <GND>
+PresetDM[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+PresetDM[1] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+PresetDM[2] <= <GND>
+PresetDM[3] <= <GND>
+ClearUS[0] <= <VCC>
+ClearUS[1] <= <VCC>
+ClearUS[2] <= <VCC>
+ClearUS[3] <= <VCC>
+ClearDS[0] <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+ClearDS[1] <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
+ClearDS[2] <= <VCC>
+ClearDS[3] <= <VCC>
+ClearUM[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ClearUM[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ClearUM[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ClearUM[3] <= <VCC>
+ClearDM[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ClearDM[1] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+ClearDM[2] <= <VCC>
+ClearDM[3] <= <VCC>
+
+
+|main|settimer_mux:comb_6
+init => init.IN8
+stop => stop.IN8
+ClearUS[0] => ClearUS[0].IN1
+ClearUS[1] => ClearUS[1].IN1
+ClearUS[2] => ClearUS[2].IN1
+ClearUS[3] => ClearUS[3].IN1
+ClearDS[0] => ClearDS[0].IN1
+ClearDS[1] => ClearDS[1].IN1
+ClearDS[2] => ClearDS[2].IN1
+ClearDS[3] => ClearDS[3].IN1
+ClearUM[0] => ClearUM[0].IN1
+ClearUM[1] => ClearUM[1].IN1
+ClearUM[2] => ClearUM[2].IN1
+ClearUM[3] => ClearUM[3].IN1
+ClearDM[0] => ClearDM[0].IN1
+ClearDM[1] => ClearDM[1].IN1
+ClearDM[2] => ClearDM[2].IN1
+ClearDM[3] => ClearDM[3].IN1
+PresetUS[0] => PresetUS[0].IN1
+PresetUS[1] => PresetUS[1].IN1
+PresetUS[2] => PresetUS[2].IN1
+PresetUS[3] => PresetUS[3].IN1
+PresetDS[0] => PresetDS[0].IN1
+PresetDS[1] => PresetDS[1].IN1
+PresetDS[2] => PresetDS[2].IN1
+PresetDS[3] => PresetDS[3].IN1
+PresetUM[0] => PresetUM[0].IN1
+PresetUM[1] => PresetUM[1].IN1
+PresetUM[2] => PresetUM[2].IN1
+PresetUM[3] => PresetUM[3].IN1
+PresetDM[0] => PresetDM[0].IN1
+PresetDM[1] => PresetDM[1].IN1
+PresetDM[2] => PresetDM[2].IN1
+PresetDM[3] => PresetDM[3].IN1
+CUS[0] <= new_mux:comb_3.port3
+CUS[1] <= new_mux:comb_3.port3
+CUS[2] <= new_mux:comb_3.port3
+CUS[3] <= new_mux:comb_3.port3
+CDS[0] <= new_mux:comb_4.port3
+CDS[1] <= new_mux:comb_4.port3
+CDS[2] <= new_mux:comb_4.port3
+CDS[3] <= new_mux:comb_4.port3
+CUM[0] <= new_mux:comb_5.port3
+CUM[1] <= new_mux:comb_5.port3
+CUM[2] <= new_mux:comb_5.port3
+CUM[3] <= new_mux:comb_5.port3
+CDM[0] <= new_mux:comb_6.port3
+CDM[1] <= new_mux:comb_6.port3
+CDM[2] <= new_mux:comb_6.port3
+CDM[3] <= new_mux:comb_6.port3
+PUS[0] <= new_mux:comb_7.port3
+PUS[1] <= new_mux:comb_7.port3
+PUS[2] <= new_mux:comb_7.port3
+PUS[3] <= new_mux:comb_7.port3
+PDS[0] <= new_mux:comb_8.port3
+PDS[1] <= new_mux:comb_8.port3
+PDS[2] <= new_mux:comb_8.port3
+PDS[3] <= new_mux:comb_8.port3
+PUM[0] <= new_mux:comb_9.port3
+PUM[1] <= new_mux:comb_9.port3
+PUM[2] <= new_mux:comb_9.port3
+PUM[3] <= new_mux:comb_9.port3
+PDM[0] <= new_mux:comb_10.port3
+PDM[1] <= new_mux:comb_10.port3
+PDM[2] <= new_mux:comb_10.port3
+PDM[3] <= new_mux:comb_10.port3
+
+
+|main|settimer_mux:comb_6|new_mux:comb_3
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_4
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_5
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_6
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_7
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_8
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_9
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|settimer_mux:comb_6|new_mux:comb_10
+stop => w0.IN0
+_input[0] => w1.IN0
+_input[1] => w2.IN0
+_input[2] => w3.IN0
+_input[3] => w4.IN0
+init => w1.IN1
+init => w2.IN1
+init => w3.IN1
+init => w4.IN1
+init => w0.IN1
+C_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C_out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7
+new_clock => new_clock.IN1
+seletor[0] => seletor[0].IN2
+seletor[1] => seletor[1].IN2
+PresetUS[0] => PresetUS[0].IN1
+PresetUS[1] => PresetUS[1].IN1
+PresetUS[2] => PresetUS[2].IN1
+PresetUS[3] => PresetUS[3].IN1
+PresetDS[0] => PresetDS[0].IN1
+PresetDS[1] => PresetDS[1].IN1
+PresetDS[2] => PresetDS[2].IN1
+PresetDS[3] => PresetDS[3].IN1
+PresetUM[0] => PresetUM[0].IN1
+PresetUM[1] => PresetUM[1].IN1
+PresetUM[2] => PresetUM[2].IN1
+PresetUM[3] => PresetUM[3].IN1
+PresetDM[0] => PresetDM[0].IN1
+PresetDM[1] => PresetDM[1].IN1
+PresetDM[2] => PresetDM[2].IN1
+PresetDM[3] => PresetDM[3].IN1
+ClearUS[0] => ClearUS[0].IN1
+ClearUS[1] => ClearUS[1].IN1
+ClearUS[2] => ClearUS[2].IN1
+ClearUS[3] => ClearUS[3].IN1
+ClearDS[0] => ClearDS[0].IN1
+ClearDS[1] => ClearDS[1].IN1
+ClearDS[2] => ClearDS[2].IN1
+ClearDS[3] => ClearDS[3].IN1
+ClearUM[0] => ClearUM[0].IN1
+ClearUM[1] => ClearUM[1].IN1
+ClearUM[2] => ClearUM[2].IN1
+ClearUM[3] => ClearUM[3].IN1
+ClearDM[0] => ClearDM[0].IN1
+ClearDM[1] => ClearDM[1].IN1
+ClearDM[2] => ClearDM[2].IN1
+ClearDM[3] => ClearDM[3].IN1
+Mostrador[0] <= timer_decoder_7seg_display:comb_18.port1
+Mostrador[1] <= timer_decoder_7seg_display:comb_18.port1
+Mostrador[2] <= timer_decoder_7seg_display:comb_18.port1
+Mostrador[3] <= timer_decoder_7seg_display:comb_18.port1
+Mostrador[4] <= timer_decoder_7seg_display:comb_18.port1
+Mostrador[5] <= timer_decoder_7seg_display:comb_18.port1
+Mostrador[6] <= timer_decoder_7seg_display:comb_18.port1
+stop <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+digit0 <= demux1x4:comb_3.port3
+digit1 <= demux1x4:comb_3.port4
+digit2 <= demux1x4:comb_3.port5
+digit3 <= demux1x4:comb_3.port6
+
+
+|main|timer:comb_7|demux1x4:comb_3
+E => WideNand0.IN0
+E => WideNand1.IN0
+E => WideNand2.IN0
+E => WideNand3.IN0
+S0 => WideNand0.IN1
+S0 => WideNand2.IN1
+S0 => WideNand1.IN1
+S0 => WideNand3.IN1
+S1 => WideNand0.IN2
+S1 => WideNand1.IN2
+S1 => WideNand2.IN2
+S1 => WideNand3.IN2
+Y0 <= WideNand0.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= WideNand1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= WideNand2.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|nine_to_zero:comb_4
+clk => clk.IN4
+Q0 <= FFJK:comb_3.port3
+Q1 <= FFJK:comb_4.port3
+Q2 <= FFJK:comb_5.port3
+Q3 <= FFJK:comb_6.port3
+clear[0] => clear[0].IN1
+clear[1] => clear[1].IN1
+clear[2] => clear[2].IN1
+clear[3] => clear[3].IN1
+preset[0] => preset[0].IN1
+preset[1] => preset[1].IN1
+preset[2] => preset[2].IN1
+preset[3] => preset[3].IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_4|FFJK:comb_3
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_4|FFJK:comb_4
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_4|FFJK:comb_5
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_4|FFJK:comb_6
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|five_to_zero:comb_8
+clk => clk.IN3
+bin_number[0] <= FFJK:jk_ff0.port3
+bin_number[1] <= FFJK:jk_ff1.port3
+bin_number[2] <= FFJK:jk_ff2.port3
+bin_number[3] <= <GND>
+clear[0] => clear[0].IN1
+clear[1] => clear[1].IN1
+clear[2] => clear[2].IN1
+clear[3] => ~NO_FANOUT~
+preset[0] => preset[0].IN1
+preset[1] => preset[1].IN1
+preset[2] => preset[2].IN1
+preset[3] => ~NO_FANOUT~
+
+
+|main|timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff0
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff1
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff2
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_12
+clk => clk.IN4
+Q0 <= FFJK:comb_3.port3
+Q1 <= FFJK:comb_4.port3
+Q2 <= FFJK:comb_5.port3
+Q3 <= FFJK:comb_6.port3
+clear[0] => clear[0].IN1
+clear[1] => clear[1].IN1
+clear[2] => clear[2].IN1
+clear[3] => clear[3].IN1
+preset[0] => preset[0].IN1
+preset[1] => preset[1].IN1
+preset[2] => preset[2].IN1
+preset[3] => preset[3].IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_12|FFJK:comb_3
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_12|FFJK:comb_4
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_12|FFJK:comb_5
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|nine_to_zero:comb_12|FFJK:comb_6
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|five_to_zero:comb_16
+clk => clk.IN3
+bin_number[0] <= FFJK:jk_ff0.port3
+bin_number[1] <= FFJK:jk_ff1.port3
+bin_number[2] <= FFJK:jk_ff2.port3
+bin_number[3] <= <GND>
+clear[0] => clear[0].IN1
+clear[1] => clear[1].IN1
+clear[2] => clear[2].IN1
+clear[3] => ~NO_FANOUT~
+preset[0] => preset[0].IN1
+preset[1] => preset[1].IN1
+preset[2] => preset[2].IN1
+preset[3] => ~NO_FANOUT~
+
+
+|main|timer:comb_7|five_to_zero:comb_16|FFJK:jk_ff0
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|five_to_zero:comb_16|FFJK:jk_ff1
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|five_to_zero:comb_16|FFJK:jk_ff2
+clk => Q~reg0.CLK
+j => Mux0.IN2
+k => Mux0.IN3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q_bar <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clear => Q~reg0.ACLR
+clear => Q.IN0
+preset => Q.IN1
+
+
+|main|timer:comb_7|mux_4x1:comb_17
+bin_number0[0] => bin_number0[0].IN1
+bin_number0[1] => bin_number0[1].IN1
+bin_number0[2] => bin_number0[2].IN1
+bin_number0[3] => bin_number0[3].IN1
+bin_number1[0] => bin_number1[0].IN1
+bin_number1[1] => bin_number1[1].IN1
+bin_number1[2] => bin_number1[2].IN1
+bin_number1[3] => bin_number1[3].IN1
+bin_number2[0] => bin_number2[0].IN1
+bin_number2[1] => bin_number2[1].IN1
+bin_number2[2] => bin_number2[2].IN1
+bin_number2[3] => bin_number2[3].IN1
+bin_number3[0] => bin_number3[0].IN1
+bin_number3[1] => bin_number3[1].IN1
+bin_number3[2] => bin_number3[2].IN1
+bin_number3[3] => bin_number3[3].IN1
+sel[0] => sel[0].IN2
+sel[1] => sel[1].IN1
+selected_number[0] <= mux_2x1_4bit:mux2.port3
+selected_number[1] <= mux_2x1_4bit:mux2.port3
+selected_number[2] <= mux_2x1_4bit:mux2.port3
+selected_number[3] <= mux_2x1_4bit:mux2.port3
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux0
+bin_number0[0] => bin_number0[0].IN1
+bin_number0[1] => bin_number0[1].IN1
+bin_number0[2] => bin_number0[2].IN1
+bin_number0[3] => bin_number0[3].IN1
+bin_number1[0] => bin_number1[0].IN1
+bin_number1[1] => bin_number1[1].IN1
+bin_number1[2] => bin_number1[2].IN1
+bin_number1[3] => bin_number1[3].IN1
+sel => sel.IN4
+selected_number[0] <= mux_2x1_1bit:mux0.port3
+selected_number[1] <= mux_2x1_1bit:mux1.port3
+selected_number[2] <= mux_2x1_1bit:mux2.port3
+selected_number[3] <= mux_2x1_1bit:mux3.port3
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux0|mux_2x1_1bit:mux0
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux0|mux_2x1_1bit:mux1
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux0|mux_2x1_1bit:mux2
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux0|mux_2x1_1bit:mux3
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux1
+bin_number0[0] => bin_number0[0].IN1
+bin_number0[1] => bin_number0[1].IN1
+bin_number0[2] => bin_number0[2].IN1
+bin_number0[3] => bin_number0[3].IN1
+bin_number1[0] => bin_number1[0].IN1
+bin_number1[1] => bin_number1[1].IN1
+bin_number1[2] => bin_number1[2].IN1
+bin_number1[3] => bin_number1[3].IN1
+sel => sel.IN4
+selected_number[0] <= mux_2x1_1bit:mux0.port3
+selected_number[1] <= mux_2x1_1bit:mux1.port3
+selected_number[2] <= mux_2x1_1bit:mux2.port3
+selected_number[3] <= mux_2x1_1bit:mux3.port3
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux1|mux_2x1_1bit:mux0
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux1|mux_2x1_1bit:mux1
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux1|mux_2x1_1bit:mux2
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux1|mux_2x1_1bit:mux3
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux2
+bin_number0[0] => bin_number0[0].IN1
+bin_number0[1] => bin_number0[1].IN1
+bin_number0[2] => bin_number0[2].IN1
+bin_number0[3] => bin_number0[3].IN1
+bin_number1[0] => bin_number1[0].IN1
+bin_number1[1] => bin_number1[1].IN1
+bin_number1[2] => bin_number1[2].IN1
+bin_number1[3] => bin_number1[3].IN1
+sel => sel.IN4
+selected_number[0] <= mux_2x1_1bit:mux0.port3
+selected_number[1] <= mux_2x1_1bit:mux1.port3
+selected_number[2] <= mux_2x1_1bit:mux2.port3
+selected_number[3] <= mux_2x1_1bit:mux3.port3
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux2|mux_2x1_1bit:mux0
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux2|mux_2x1_1bit:mux1
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux2|mux_2x1_1bit:mux2
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|mux_4x1:comb_17|mux_2x1_4bit:mux2|mux_2x1_1bit:mux3
+bin_number0 => and0.IN0
+bin_number1 => and1.IN0
+sel => and1.IN1
+sel => and0.IN1
+selected_number <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|timer:comb_7|timer_decoder_7seg_display:comb_18
+bin_number[0] => and0.IN0
+bin_number[0] => xor0.IN0
+bin_number[0] => and2.IN0
+bin_number[0] => xnor0.IN0
+bin_number[0] => seg_e_out.IN1
+bin_number[0] => and5.IN0
+bin_number[0] => or1.IN0
+bin_number[0] => and7.IN0
+bin_number[0] => and1.IN0
+bin_number[0] => seg_c_out.IN0
+bin_number[1] => xor0.IN1
+bin_number[1] => seg_c_out.IN1
+bin_number[1] => xnor0.IN1
+bin_number[1] => and6.IN1
+bin_number[1] => and7.IN1
+bin_number[1] => seg_a_out.IN1
+bin_number[1] => and2.IN1
+bin_number[1] => and4.IN0
+bin_number[1] => and8.IN0
+bin_number[2] => and1.IN1
+bin_number[2] => seg_b_out.IN1
+bin_number[2] => and3.IN1
+bin_number[2] => and4.IN1
+bin_number[2] => and7.IN2
+bin_number[2] => and0.IN1
+bin_number[2] => seg_c_out.IN2
+bin_number[2] => and2.IN2
+bin_number[2] => and5.IN1
+bin_number[2] => or1.IN1
+bin_number[2] => and8.IN1
+bin_number[3] => and0.IN2
+bin_number[3] => and2.IN3
+bin_number[3] => and5.IN2
+bin_number[3] => and8.IN2
+segments[0] <= seg_a_out.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= seg_b_out.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= seg_c_out.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= seg_d_out.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= seg_e_out.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= seg_f_out.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= seg_g_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|debounce:comb_8
+b => b.IN1
+clk => clk.IN3
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|debounce:comb_8|FFD:comb_3
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|debounce:comb_8|FFD:comb_4
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|debounce:comb_8|FFD:comb_5
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

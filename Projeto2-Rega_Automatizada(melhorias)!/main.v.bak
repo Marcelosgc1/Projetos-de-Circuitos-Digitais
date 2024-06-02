@@ -23,7 +23,7 @@ module main
 	output		init
 );
 
-	wire [1:0] selector_display;
+	wire [1:0] seletor;
 	
 	// Declaring wires
 	wire irrigation_state_w, sprinkler_state_w, drip_state_w, 
@@ -159,76 +159,25 @@ module main
 		segment_g_o
 	);
 	
-	frequency_divider(
-		1,
-		0,
+	temporizador(
 		clk,
-		new_clock,
-		selector_display
-	);
-	
-	kronos(
-		temperature_i,
-		air_humidity_i,
-		high_level_indicator_i,
-		middle_level_indicator_i, 
-		error_indicator_o, 
-		PresetUS, 
-		PresetDS, 
-		PresetUM, 
-		PresetDM, 
-		ClearUS, 
-		ClearDS, 
-		ClearUM, 
-		ClearDM
-	);
-	
-	settimer_mux(
-		init,
-		stop,
-		ClearUS, 
-		ClearDS, 
-		ClearUM, 
-		ClearDM, 
-		PresetUS, 
-		PresetDS, 
-		PresetUM, 
-		PresetDM,
-		CUS,
-		CDS,
-		CUM,
-		CDM,
-		PUS,
-		PDS,
-		PUM,
-		PDM
-	);
-	
-	timer(
-		new_clock,
-		selector_display,
-		PUS, 
-		PDS, 
-		PUM, 
-		PDM, 
-		CUS, 
-		CDS, 
-		CUM, 
-		CDM,
 		mostrador,
-		stop,
 		digit1_o,
 		digit2_o,
 		digit3_o,
-		digit4_o
+		digit4_o,
+		init,
+		temperature_i,
+		air_humidity_i,
+		high_level_indicator_i,
+		seletor
 	);
 	
 	debounce(
 		b,
-		selector_display[1],
+		seletor[1],
 		init
 	);
-//a
 	
 	
 endmodule

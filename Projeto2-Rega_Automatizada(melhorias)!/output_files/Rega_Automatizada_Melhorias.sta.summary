@@ -1,0 +1,413 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'timer:comb_7|nine_to_zero:comb_12|FFJK:comb_3|Q'
+Slack : -2.741
+TNS   : -6.729
+
+Type  : Setup 'timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff0|Q'
+Slack : -1.871
+TNS   : -5.480
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff25|q'
+Slack : -1.842
+TNS   : -5.281
+
+Type  : Setup 'timer:comb_7|nine_to_zero:comb_4|FFJK:comb_3|Q'
+Slack : -1.690
+TNS   : -2.924
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff16|q'
+Slack : -1.009
+TNS   : -1.993
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff9|q'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff23|q'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff11|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff17|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff1|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff13|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff19|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff21|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff3|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff5|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff7|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff22|q'
+Slack : 0.540
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff14|q'
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff15|q'
+Slack : 0.699
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff6|q'
+Slack : 0.807
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff4|q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff8|q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff20|q'
+Slack : 0.819
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff12|q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff18|q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff2|q'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff10|q'
+Slack : 1.169
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff0|q'
+Slack : 1.522
+TNS   : 0.000
+
+Type  : Setup 'clk'
+Slack : 1.685
+TNS   : 0.000
+
+Type  : Setup 'frequency_divider:comb_4|t_flip_flop:t_ff24|q'
+Slack : 2.142
+TNS   : 0.000
+
+Type  : Hold 'timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff0|Q'
+Slack : -5.250
+TNS   : -20.079
+
+Type  : Hold 'timer:comb_7|nine_to_zero:comb_4|FFJK:comb_3|Q'
+Slack : -4.305
+TNS   : -7.989
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff24|q'
+Slack : -2.196
+TNS   : -2.196
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff16|q'
+Slack : -2.122
+TNS   : -2.122
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff25|q'
+Slack : -2.110
+TNS   : -6.447
+
+Type  : Hold 'clk'
+Slack : -1.739
+TNS   : -1.739
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff0|q'
+Slack : -1.576
+TNS   : -1.576
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff10|q'
+Slack : -1.223
+TNS   : -1.223
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff2|q'
+Slack : -0.887
+TNS   : -0.887
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff12|q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff18|q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff20|q'
+Slack : -0.873
+TNS   : -0.873
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff4|q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff8|q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff6|q'
+Slack : -0.861
+TNS   : -0.861
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff15|q'
+Slack : -0.753
+TNS   : -0.753
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff14|q'
+Slack : -0.631
+TNS   : -0.631
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff22|q'
+Slack : -0.594
+TNS   : -0.594
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff13|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff19|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff21|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff3|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff5|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff7|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff11|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff17|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff1|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff23|q'
+Slack : -0.512
+TNS   : -0.512
+
+Type  : Hold 'frequency_divider:comb_4|t_flip_flop:t_ff9|q'
+Slack : -0.262
+TNS   : -0.262
+
+Type  : Hold 'timer:comb_7|nine_to_zero:comb_12|FFJK:comb_3|Q'
+Slack : 1.078
+TNS   : 0.000
+
+Type  : Recovery 'frequency_divider:comb_4|t_flip_flop:t_ff25|q'
+Slack : -11.878
+TNS   : -11.878
+
+Type  : Recovery 'timer:comb_7|nine_to_zero:comb_12|FFJK:comb_3|Q'
+Slack : -10.526
+TNS   : -10.526
+
+Type  : Recovery 'timer:comb_7|nine_to_zero:comb_4|FFJK:comb_3|Q'
+Slack : -8.516
+TNS   : -8.516
+
+Type  : Recovery 'timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff0|Q'
+Slack : -8.262
+TNS   : -8.262
+
+Type  : Recovery 'frequency_divider:comb_4|t_flip_flop:t_ff23|q'
+Slack : -1.573
+TNS   : -1.573
+
+Type  : Recovery 'frequency_divider:comb_4|t_flip_flop:t_ff22|q'
+Slack : -1.224
+TNS   : -1.224
+
+Type  : Removal 'timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff0|Q'
+Slack : -0.621
+TNS   : -0.621
+
+Type  : Removal 'timer:comb_7|nine_to_zero:comb_4|FFJK:comb_3|Q'
+Slack : -0.367
+TNS   : -0.367
+
+Type  : Removal 'frequency_divider:comb_4|t_flip_flop:t_ff22|q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Removal 'frequency_divider:comb_4|t_flip_flop:t_ff23|q'
+Slack : 1.157
+TNS   : 0.000
+
+Type  : Removal 'timer:comb_7|nine_to_zero:comb_12|FFJK:comb_3|Q'
+Slack : 1.643
+TNS   : 0.000
+
+Type  : Removal 'frequency_divider:comb_4|t_flip_flop:t_ff25|q'
+Slack : 2.995
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff0|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff10|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff11|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff12|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff13|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff14|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff15|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff16|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff17|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff18|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff19|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff1|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff20|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff21|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff22|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff23|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff24|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff25|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff2|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff8|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'frequency_divider:comb_4|t_flip_flop:t_ff9|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'timer:comb_7|five_to_zero:comb_8|FFJK:jk_ff0|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'timer:comb_7|nine_to_zero:comb_12|FFJK:comb_3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'timer:comb_7|nine_to_zero:comb_4|FFJK:comb_3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------
