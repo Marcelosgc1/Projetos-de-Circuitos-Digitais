@@ -223,7 +223,7 @@ module main
 		digit4_o
 	);
 	
-	debounce(
+	debouncer(
 		b,
 		selector_display[1],
 		init
