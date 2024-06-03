@@ -27,39 +27,52 @@ wire [3:0] Atual;
 //coisas de display
 demux1x4(1, seletor[0], seletor[1], digit0, digit1, digit2, digit3);
 
-
-
-
-
-
 // UNIDADE SEGUNDOS
-nine_to_zero(new_clock, UnidadeSegundos[0], UnidadeSegundos[1], UnidadeSegundos[2], UnidadeSegundos[3], ClearUS, PresetUS);
+timer_nine_zero_counter counts_unit_of_seconds(
+	new_clock, 
+	ClearUS, 
+	PresetUS,
+	UnidadeSegundos
+	);
 // UNIDADE SEGUNDOS
-
 
 and(barril, UnidadeSegundos[0], !UnidadeSegundos[1], !UnidadeSegundos[2], UnidadeSegundos[3]); //flag unidade s -> dezena s
 
-
 //DEZENA SEGUNDOS
-five_to_zero(barril, DezenaSegundos, ClearDS, PresetDS);
+timer five_zero_counter counts_dozen_of_seconds(
+	barril, 
+	ClearDS, 
+	PresetDS,
+	DezenaSegundos
+	);
 //DEZENA SEGUNDOS
 
 and(barril_dobrado, DezenaSegundos[0],!DezenaSegundos[1],DezenaSegundos[2],!DezenaSegundos[3]); //flag dezena s -> unidade min
 
 // UNIDADE MINUTOS
-nine_to_zero(barril_dobrado, UnidadeMinutos[0], UnidadeMinutos[1], UnidadeMinutos[2], UnidadeMinutos[3], ClearUM, PresetUM);
+timer_nine_zero_counter counts_unit_of_minutes(
+	barril_dobrado, 
+	ClearUM, 
+	PresetUM,
+	UnidadeMinutos
+	);
 // UNIDADE MINUTOS
 
 and(barril_triplicado, UnidadeMinutos[0], !UnidadeMinutos[1], !UnidadeMinutos[2], UnidadeMinutos[3]); //flag unidade min -> dezena min
 
 // DEZENA MINUTOS
-five_to_zero(barril_triplicado, DezenaMinutos, ClearDM, PresetDM);
+five_to_zero counts_dozen_of_minutes(
+	barril_triplicado,  
+	ClearDM, 
+	PresetDM,
+	DezenaMinutos
+	);
 // DEZENA MINUTOS
 
 
 //escolher numero
 mux_4x1(UnidadeSegundos,DezenaSegundos,UnidadeMinutos,DezenaMinutos,seletor,Atual);
-timer_decoder_7seg_display(Atual, Mostrador);
+timer_decoder_7seg_display decodes_timer(Atual, Mostrador);
 
 
 
