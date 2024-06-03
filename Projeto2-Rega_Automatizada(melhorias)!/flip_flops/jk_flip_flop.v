@@ -2,7 +2,7 @@
 
 module jk_flip_flop
 (
-	input wire  clk, j, k, clear, preset
+	input wire  clk, j, k, clear, preset,
 	output reg  q, 
 	output wire q_bar
 );
