@@ -20,7 +20,9 @@ module main
 	output 		digit2_o,
 	output 		digit3_o,
 	output 		digit4_o,
-	output		init
+	output		init,
+	output wire [6:0] rows_status,
+	output wire [4:0] columns_status
 );
 
 	wire [1:0] selector_display;
@@ -221,6 +223,15 @@ module main
 		digit2_o,
 		digit3_o,
 		digit4_o
+	);
+	
+	irrigation_and_water_level_display(
+		selector_display[1],
+	// new_clock,
+		{drip_state_w, sprinkler_state_w},
+	// {bit1_value, bit0_value},
+      rows_status,
+		columns_status
 	);
 	
 	debouncer(
