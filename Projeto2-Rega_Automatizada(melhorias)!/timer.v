@@ -39,7 +39,7 @@ timer_nine_zero_counter counts_unit_of_seconds(
 and(barril, UnidadeSegundos[0], !UnidadeSegundos[1], !UnidadeSegundos[2], UnidadeSegundos[3]); //flag unidade s -> dezena s
 
 //DEZENA SEGUNDOS
-timer five_zero_counter counts_dozen_of_seconds(
+timer_five_zero_counter counts_dozen_of_seconds(
 	barril, 
 	ClearDS, 
 	PresetDS,
@@ -61,7 +61,7 @@ timer_nine_zero_counter counts_unit_of_minutes(
 and(barril_triplicado, UnidadeMinutos[0], !UnidadeMinutos[1], !UnidadeMinutos[2], UnidadeMinutos[3]); //flag unidade min -> dezena min
 
 // DEZENA MINUTOS
-five_to_zero counts_dozen_of_minutes(
+timer_five_zero_counter counts_dozen_of_minutes(
 	barril_triplicado,  
 	ClearDM, 
 	PresetDM,
