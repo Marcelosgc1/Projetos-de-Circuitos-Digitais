@@ -241,10 +241,10 @@ module main
 	
 	irrigation_and_water_level_display(
 		selector_display[1],
-	// new_clock,
+	        new_clock,
 		{drip_state_w, sprinkler_state_w},
-	// {bit1_value, bit0_value},
-      rows_status,
+	        {bit1_value, bit0_value},
+      		rows_status,
 		columns_status
 	);
 	
