@@ -1,5 +1,5 @@
 module timer(
-	input new_clock,
+	input clk,
 	input [1:0] seletor,
 	input [3:0] PresetUS, 
 	input [3:0] PresetDS,
@@ -78,11 +78,13 @@ timer_decoder_7seg_display decodes_timer(Atual, Mostrador);
 
 
 // PARAR NO ZERO
-nor(stop, 	UnidadeSegundos[0], UnidadeSegundos[1], UnidadeSegundos[2], UnidadeSegundos[3],
+or(clk_enable, 	UnidadeSegundos[0], UnidadeSegundos[1], UnidadeSegundos[2], UnidadeSegundos[3],
 				DezenaSegundos[0], DezenaSegundos[1], DezenaSegundos[2], DezenaSegundos[3],
 				UnidadeMinutos[0], UnidadeMinutos[1], UnidadeMinutos[2], UnidadeMinutos[3],
 				DezenaMinutos[0], DezenaMinutos[1], DezenaMinutos[2], DezenaMinutos[3]
 );
+
+and(new_clock, clk, clk_enable);
 //
 
 
