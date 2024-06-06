@@ -12,7 +12,7 @@ module irrigation_and_water_level_display
 );
 	wire [69:0] rows_values;
 	wire [34:0] selected_values;
-	wire 			slowed_1Hz_frequency;
+	wire 			aux, slowed_1Hz_frequency;
 	
 	irrigation_status_decoder decodes_irrigation_status(
 		irrigation_status,
@@ -26,7 +26,8 @@ module irrigation_and_water_level_display
 	);
 	
 	// Slows the clock and uses it as a selector
-	d_flip_flop slows_1Hz_frequency(1, _1Hz_frequency, slowed_1Hz_frequency);
+	t_flip_flop t_ff0_slows_1Hz_frequency(1, _1Hz_frequency, , aux, );
+	t_flip_flop t_ff1_slows_1Hz_frequency(1, aux, , slowed_1Hz_frequency, );
 	
 	decoders_muxes selects_rows_values(
 		rows_values,
