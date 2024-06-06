@@ -2,7 +2,7 @@
 
 module high_level_checker
 (
-	input  wire [1:0] dozen_minutes_timer, dozen_minutes_preset, dozen_seconds_timer
+	input  wire [1:0] dozen_minutes_timer, dozen_minutes_preset, dozen_seconds_timer,
 	input  wire [2:0] unit_minutes_timer, 
 	input  wire			high_level_indicator,
 	output wire 		high_level_sensor
@@ -18,9 +18,6 @@ module high_level_checker
 	
 	not inv4(inv_unit_timer[0], unit_minutes_timer[0]);
 	not inv5(inv_unit_timer[1], unit_minutes_timer[1]);
-	
-	not inv6(inv_unit_preset[0], unit_minutes_preset[0]);
-	not inv7(inv_unit_preset[1], unit_minutes_preset[1]);
 	
 	// When the dozen of minutes is equal 3
 	and and0(aux[0], dozen_minutes_timer[1], dozen_minutes_timer[0]);
