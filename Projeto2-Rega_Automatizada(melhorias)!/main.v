@@ -26,6 +26,22 @@ module main
 );
 
 	wire [1:0] selector_display;
+	wire [3:0]ClearUS; 
+	wire [3:0]ClearDS; 
+	wire [3:0]ClearUM;
+	wire	[3:0]ClearDM;
+	wire	[3:0]PresetUS; 
+	wire	[3:0]PresetDS; 
+	wire	[3:0]PresetUM; 
+	wire	[3:0]PresetDM;
+	wire	[3:0]CUS;
+	wire	[3:0]CDS;
+	wire	[3:0]CUM;
+	wire	[3:0]CDM;
+	wire	[3:0]PUS;
+	wire	[3:0]PDS;
+	wire	[3:0]PUM;
+	wire	[3:0]PDM;	
 	
 	// Declaring wires
 	wire irrigation_state_w, sprinkler_state_w, drip_state_w, 
@@ -187,7 +203,6 @@ module main
 	
 	settimer_mux(
 		init,
-		stop,
 		ClearUS, 
 		ClearDS, 
 		ClearUM, 
@@ -218,7 +233,6 @@ module main
 		CUM, 
 		CDM,
 		mostrador,
-		stop,
 		digit1_o,
 		digit2_o,
 		digit3_o,
