@@ -41,6 +41,13 @@ module level_state(input clk, input H, input M, input L, input init, output [2:0
 
 
 
+	/*
+	COMO FUNCIONA?
+ 	001 -> nível baixo
+  	010 -> nível médio
+   	100 -> nível alto
+    	000 -> erro OU nivel crítico
+ 	*/
 
 
 endmodule
