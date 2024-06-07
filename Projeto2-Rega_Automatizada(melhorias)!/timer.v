@@ -10,7 +10,6 @@ module timer(
 	input [3:0] ClearUM,
 	input [3:0] ClearDM,
 	output [6:0]Mostrador, 
-	output stop,
 	output digit0, 
 	output digit1, 
 	output digit2, 
