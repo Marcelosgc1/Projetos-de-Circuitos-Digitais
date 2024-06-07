@@ -35,7 +35,7 @@ module irrigation_state(input clk, input T, input Ua, input Us, input init, outp
 	and(sprinker_inverse, aux2_bar, init);
 	
 	
-	jk_flip_flop(0, 0, clk, sprinker_inverse, sprinker, water_level_state[2]);
+	jk_flip_flop(0, 0, clk, sprinker_inverse, sprinker, type_of_irrigation_state[2]);
 	
 	/*
 		COMO FUNCIONA?
