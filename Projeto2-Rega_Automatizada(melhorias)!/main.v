@@ -43,6 +43,11 @@ module main
 	wire	[3:0]PDS;
 	wire	[3:0]PUM;
 	wire	[3:0]PDM;	
+	wire	[3:0]water_level_state;
+	wire	[2:0]type_of_irrigation_state;
+	wire	[1:0]coded_wl;
+	wire	[3:0]udm;
+	wire	[1:0]coded_irg;
 	
 	// Declaring wires
 	wire irrigation_state_w, sprinkler_state_w, drip_state_w, 
@@ -56,127 +61,47 @@ module main
 	
 	// Declaring a serie of instances of  
 	// components needed for the project  
-	error_detector detects_error(
-		high_level_indicator_i,
-		middle_level_indicator_i,
-		low_level_indicator_i,
-		error_indicator_o
-	);
-	
-	alarm_trigger triggers_alarm(
-		low_level_indicator_i,
-		error_indicator_o,
-		alarm_state_o
-	);
-	
-	inlet_valve_trigger triggers_inlet_valve(
-		high_level_indicator_i,
-		error_indicator_o,
-		inlet_valve_o
-	);
-	
-	irrigation_trigger triggers_irrigation(
-		alarm_state_o,
-		soil_humidity_i,
-		irrigation_state_w
-	);
-	
-	sprinkler_trigger triggers_sprinkler(
-		middle_level_indicator_i,
-		irrigation_state_w,
-		temperature_i,
-		air_humidity_i,
-		sprinkler_state_w
-	);
-	
-	drip_trigger triggers_drip(
-		middle_level_indicator_i,
-		irrigation_state_w,
-		temperature_i,
-		air_humidity_i,
-		drip_state_w
-	);
-	
-	encoder_water_tank_level encodes_water_tank_level(
-		high_level_indicator_i,
-		middle_level_indicator_i,
-		low_level_indicator_i,
-		bit0_value,
-		bit1_value
-	);
-			
-	decoder_water_tank_level decodes_water_tank_level(
-		bit0_value,
-		bit1_value,
-		Ca,
-		Cb,
-		Cc,
-		Cd,
-		Ce,
-		Cf,
-		Cg
-	);
-		
-	decoder_irrigation_condition decodes_irrigation_condition(
-		sprinkler_state_w,
-		drip_state_w,
-		Ia,
-		Ib,
-		Ic,
-		Id,
-		Ie,
-		If,
-		Ig
-	);
-		
-	mux_2_1 mux_segment_a(
-		Ca,
-		Ia,
-		selector_i,
-		segment_a_o
-	);
-	
-	mux_2_1 mux_segment_b(
-		Cb,
-		Ib,
-		selector_i,
-		segment_b_o
-	);
-	
-	mux_2_1 mux_segment_c(
-		Cc,
-		Ic,
-		selector_i,
-		segment_c_o
-	);
 
-	mux_2_1 mux_segment_d(
-		Cd,
-		Id,
-		selector_i,
-		segment_d_o
+	
+	
+	
+	level_state(
+		clk,
+		high_level_indicator_i,
+		middle_level_indicator_i,
+		low_level_indicator_i,
+		init,
+		water_level_state
 	);
 	
-	mux_2_1 mux_segment_e(
-		Ce,
-		Ie,
-		selector_i,
-		segment_e_o
+	irrigation_state(
+		clk,
+		temperature_i,
+		air_humidity_i,
+		soil_humidity_i,
+		init,
+		type_of_irrigation_state
+	);
+	warnings(
+		water_level_state,
+		error_indicator_o,
+		inlet_valve_o,
+		alarm_state_o	
 	);
 	
-	mux_2_1 mux_segment_f(
-		Cf,
-		If,
-		selector_i,
-		segment_f_o
+	encorder_water_level(
+		water_level_state,
+		coded_wl
 	);
 	
-	mux_2_1 mux_segment_g(
-		Cg,
-		Ig,
-		selector_i,
-		segment_g_o
+	encorder_irrigation(
+		type_of_irrigation_state,
+		ddm,
+		udm,
+		alarm_state_o,
+		coded_irg
 	);
+	
 	
 	frequency_divider(
 		1,
@@ -239,15 +164,16 @@ module main
 		digit2_o,
 		digit3_o,
 		digit4_o,
-		ddm
+		ddm,
+		udm
 	);
 	
 	irrigation_and_water_level_display(
 		selector_display[1],
-	        new_clock,
-		{drip_state_w, sprinkler_state_w},
-	        {bit1_value, bit0_value},
-      		rows_status,
+	   new_clock,
+		coded_irg,
+	   coded_wl,
+      rows_status,
 		columns_status
 	);
 	
@@ -256,6 +182,12 @@ module main
 		selector_display[1],
 		init
 	);
+	
+	
+	
+	
+	
+	
 //a
 	
 	

@@ -14,13 +14,13 @@ module timer(
 	output digit1, 
 	output digit2, 
 	output digit3,
-	output [3:0] DezenaMinutos
+	output [3:0] DezenaMinutos,
+	output [3:0] UnidadeMinutos
 );
 //module
 
 wire [3:0] UnidadeSegundos;
 wire [3:0] DezenaSegundos;
-wire [3:0] UnidadeMinutos;
 wire [3:0] Atual;
 
 //coisas de display
