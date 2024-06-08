@@ -13,14 +13,14 @@ module timer(
 	output digit0, 
 	output digit1, 
 	output digit2, 
-	output digit3
+	output digit3,
+	output [3:0] DezenaMinutos
 );
 //module
 
 wire [3:0] UnidadeSegundos;
 wire [3:0] DezenaSegundos;
 wire [3:0] UnidadeMinutos;
-wire [3:0] DezenaMinutos;
 wire [3:0] Atual;
 
 //coisas de display
@@ -35,33 +35,33 @@ timer_nine_zero_counter counts_unit_of_seconds(
 	);
 // UNIDADE SEGUNDOS
 
-and(barril, UnidadeSegundos[0], !UnidadeSegundos[1], !UnidadeSegundos[2], UnidadeSegundos[3]); //flag unidade s -> dezena s
+and(one_sec, UnidadeSegundos[0], !UnidadeSegundos[1], !UnidadeSegundos[2], UnidadeSegundos[3]); //flag unidade s -> dezena s
 
 //DEZENA SEGUNDOS
 timer_five_zero_counter counts_dozen_of_seconds(
-	barril, 
+	one_sec, 
 	ClearDS, 
 	PresetDS,
 	DezenaSegundos
 	);
 //DEZENA SEGUNDOS
 
-and(barril_dobrado, DezenaSegundos[0],!DezenaSegundos[1],DezenaSegundos[2],!DezenaSegundos[3]); //flag dezena s -> unidade min
+and(ten_sec, DezenaSegundos[0],!DezenaSegundos[1],DezenaSegundos[2],!DezenaSegundos[3]); //flag dezena s -> unidade min
 
 // UNIDADE MINUTOS
 timer_nine_zero_counter counts_unit_of_minutes(
-	barril_dobrado, 
+	ten_sec, 
 	ClearUM, 
 	PresetUM,
 	UnidadeMinutos
 	);
 // UNIDADE MINUTOS
 
-and(barril_triplicado, UnidadeMinutos[0], !UnidadeMinutos[1], !UnidadeMinutos[2], UnidadeMinutos[3]); //flag unidade min -> dezena min
+and(one_min, UnidadeMinutos[0], !UnidadeMinutos[1], !UnidadeMinutos[2], UnidadeMinutos[3]); //flag unidade min -> dezena min
 
 // DEZENA MINUTOS
 timer_five_zero_counter counts_dozen_of_minutes(
-	barril_triplicado,  
+	one_min,  
 	ClearDM, 
 	PresetDM,
 	DezenaMinutos
