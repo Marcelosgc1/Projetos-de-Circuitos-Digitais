@@ -4,6 +4,7 @@ module kronos(
 	input H,
 	input M,
 	input Error,
+	input Us,
 	output [3:0] PresetUS,
 	output [3:0] PresetDS,
 	output [3:0] PresetUM,
@@ -16,7 +17,7 @@ module kronos(
 
 //Criando variavel: Temporizador_habilitado
 
-nor(TH, !M, Error);
+nor(TH, !M, Error, Us);
 //Se TH = 0, o temporizador vai mostrar 00.00, se TH = 1, vai ser possível setar o tempo normal.
 
 
