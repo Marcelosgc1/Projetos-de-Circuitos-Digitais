@@ -22,7 +22,8 @@ module main
 	output 		digit4_o,
 	output		init,
 	output wire [6:0] rows_status,
-	output wire [4:0] columns_status
+	output wire [4:0] columns_status,
+	output [3:0]ddm
 );
 
 	wire [1:0] selector_display;
@@ -191,6 +192,7 @@ module main
 		high_level_indicator_i,
 		middle_level_indicator_i, 
 		error_indicator_o, 
+		soil_humidity_i,
 		PresetUS, 
 		PresetDS, 
 		PresetUM, 
@@ -236,7 +238,8 @@ module main
 		digit1_o,
 		digit2_o,
 		digit3_o,
-		digit4_o
+		digit4_o,
+		ddm
 	);
 	
 	irrigation_and_water_level_display(
