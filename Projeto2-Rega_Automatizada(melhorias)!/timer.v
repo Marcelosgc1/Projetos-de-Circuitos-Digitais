@@ -9,7 +9,7 @@ module timer(
 	input [3:0] ClearDS,
 	input [3:0] ClearUM,
 	input [3:0] ClearDM,
-	output [6:0]Mostrador, 
+	output [7:0]Mostrador, 
 	output digit0, 
 	output digit1, 
 	output digit2, 
@@ -25,7 +25,7 @@ wire [3:0] Atual;
 
 //coisas de display
 demux1x4(1, seletor[0], seletor[1], digit0, digit1, digit2, digit3);
-
+	
 // UNIDADE SEGUNDOS
 timer_nine_zero_counter counts_unit_of_seconds(
 	new_clock, 
@@ -71,8 +71,8 @@ timer_five_zero_counter counts_dozen_of_minutes(
 
 //escolher numero
 mux_4x1(UnidadeSegundos,DezenaSegundos,UnidadeMinutos,DezenaMinutos,seletor,Atual);
-timer_decoder_7seg_display decodes_timer(Atual, Mostrador);
-
+timer_decoder_7seg_display decodes_timer(Atual, Mostrador[6:0]);
+dot_enabler(seletor, Mostrador[7]);
 
 
 
