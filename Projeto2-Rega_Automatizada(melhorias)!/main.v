@@ -15,7 +15,7 @@ module main
 	output wire error_indicator_o, 
 	output wire alarm_state_o, 
 	output wire inlet_valve_o,
-	output		[6:0]mostrador,
+	output		[7:0]mostrador,
 	output 		digit1_o,
 	output 		digit2_o,
 	output 		digit3_o,
