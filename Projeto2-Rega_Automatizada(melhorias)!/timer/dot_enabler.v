@@ -4,7 +4,7 @@
 module dot_enabler
 (
 	input  wire [1:0] frequencies,
-	output wire 		dot_status
+	output wire       dot_status
 );
 	wire aux;
 	
