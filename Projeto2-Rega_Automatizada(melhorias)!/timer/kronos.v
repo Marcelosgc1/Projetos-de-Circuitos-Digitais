@@ -4,6 +4,7 @@ module kronos(
 	input H,
 	input M,
 	input Error,
+	input Us,
 	output [3:0] PresetUS,
 	output [3:0] PresetDS,
 	output [3:0] PresetUM,
@@ -16,7 +17,7 @@ module kronos(
 
 //Criando variavel: Temporizador_habilitado
 
-nor(TH, !M, Error);
+nor(TH, !M, Error, Us);
 //Se TH = 0, o temporizador vai mostrar 00.00, se TH = 1, vai ser possível setar o tempo normal.
 
 
@@ -71,13 +72,14 @@ assign PresetUM[3] = 0;
 
 
 //----- DEZENA SEGUNDOS
-//P0 = H'.(Ua'+T')
-or (w7, Ua_bar, T_bar);
-and (PresetDS[0], H_bar, w7, TH);
+//P0 = H'. Ua'+ Ua.T'.H
+and (PresetDS[0], aux4, TH);
 
-//P1 = H'.(Ua'+T')
-or (w8, Ua_bar, T_bar);
-and (PresetDS[1], H_bar, w8, TH);
+//P1 = H'. Ua'+ Ua.T'.H
+and (w8, Ua_bar, H_bar);
+and (w9, Ua, T_bar, H);
+or (aux4, w9, w8);
+and (PresetDS[1], aux4, TH);
 
 //P2 = 0
 assign PresetDS[2] = 0;
