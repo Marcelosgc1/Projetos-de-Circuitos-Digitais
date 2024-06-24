@@ -23,10 +23,10 @@ module main
 wire [13:0]lines;
 wire [1:0]states;
 wire [1:0]type_of_irrigation_state;
-wire [1:0]DS;
+wire [3:0]DS;
 wire [3:0]US;
-
-
+assign DS[3] = 0;
+assign DS[2] = 0;
 // IN DEVELOPMENT!!
 
 assign columns_status[0] = 1;
@@ -46,7 +46,7 @@ assign columns_status[4] = 1;
 	
 	state_transiction(clk_50mhz, states, pulse_transiction);
 	
-	timer(clk_1hz, states, type_of_irrigation_state, pulse_transiction, init_pulse, DS, US, clean_done);
+	timer(clk_1hz, states, type_of_irrigation_state, pulse_transiction, init_pulse, DS[1:0], US, clean_done);
 	
 	
 	irrigation_state(
