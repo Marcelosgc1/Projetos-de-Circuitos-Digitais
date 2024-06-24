@@ -1,4 +1,4 @@
-module irrigation_state(input clk, input T, input Ua, input Us, input init, output [1:0]type_of_irrigation_state);
+module irrigation_state(input T, input Ua, input Us, input init, output [1:0]type_of_irrigation_state);
 	
 	
 	
@@ -15,7 +15,7 @@ module irrigation_state(input clk, input T, input Ua, input Us, input init, outp
 	and(bit1_inverse, temp0_bar, init);
 	
 	
-	jk_flip_flop(0, 0, clk, bit1_inverse, bit1, type_of_irrigation_state[0]);
+	jk_flip_flop(0, 0, 0, bit1_inverse, bit1, type_of_irrigation_state[0]);
 
 	
 	//bit  2
@@ -25,7 +25,7 @@ module irrigation_state(input clk, input T, input Ua, input Us, input init, outp
 	and(bit2, temp1, init);
 	and(bit2_inverse, temp1_bar, init);
 	
-	jk_flip_flop(0, 0, clk, bit2_inverse, bit2, type_of_irrigation_state[1]);
+	jk_flip_flop(0, 0, 0, bit2_inverse, bit2, type_of_irrigation_state[1]);
 
 	
 	
