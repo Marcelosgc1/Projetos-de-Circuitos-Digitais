@@ -64,7 +64,6 @@ set_global_assignment -name VERILOG_FILE display.v
 set_global_assignment -name VERILOG_FILE mux16_4.v
 set_global_assignment -name VERILOG_FILE circuit_state.v
 set_global_assignment -name VERILOG_FILE level_to_pulse.v
-set_global_assignment -name VERILOG_FILE state_transiction.v
 set_global_assignment -name VERILOG_FILE presets.v
 set_global_assignment -name VERILOG_FILE timer.v
 set_global_assignment -name VERILOG_FILE counter_9_0.v

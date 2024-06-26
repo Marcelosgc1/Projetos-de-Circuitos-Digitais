@@ -42,9 +42,8 @@ assign columns_status[4] = 1;
 	
 	
 	
-	circuit_state(clk_50mhz, init_pulse, {lines[12], lines[10], lines[5], lines[1]}, type_of_irrigation_state, states);
+	circuit_state(clk_50mhz, init_pulse, {lines[12], lines[10], lines[5], lines[1]}, type_of_irrigation_state, states, pulse_transiction);
 	
-	state_transiction(clk_50mhz, states, pulse_transiction);
 	
 	timer(clk_1hz, states, type_of_irrigation_state, pulse_transiction, init_pulse, DS[1:0], US, clean_done);
 	
