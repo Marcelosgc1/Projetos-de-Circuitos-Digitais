@@ -101,3 +101,12 @@ set_location_assignment PIN_81 -to rows_status[4]
 set_location_assignment PIN_91 -to rows_status[5]
 set_location_assignment PIN_89 -to rows_status[6]
 set_location_assignment PIN_58 -to clk_fg
+set_global_assignment -name VERILOG_FILE level_to_pulse.v
+set_location_assignment PIN_54 -to US[0]
+set_location_assignment PIN_55 -to US[1]
+set_location_assignment PIN_57 -to US[2]
+set_location_assignment PIN_61 -to US[3]
+set_location_assignment PIN_71 -to DS[0]
+set_location_assignment PIN_73 -to DS[1]
+set_location_assignment PIN_75 -to DS[2]
+set_location_assignment PIN_76 -to DS[3]

@@ -1,4 +1,4 @@
-module circuit_state(input clk, input initialize, input [3:0]water_tank_level, input [1:0]irrigation, output [1:0]state, output transition);
+module circuit_state(input clk, input initialize, input [3:0]water_tank_level, input [1:0]irrigation, output [1:0]state);
 
 
 d_flip_flop bit0(d0, clk, state[0], initialize);
@@ -28,11 +28,5 @@ and(aux7, !state[0], !state[1], irrigation[1], !irrigation[0], water_tank_level[
 
 
 
-//pulse comb circuit
-or(transition, aux0, aux3, temp0, temp1);
-
-
-and(temp0, !state[1], state[0], irrigation[1], !water_tank_level[1]);
-and(temp1, state[1], !state[0], irrigation[1], water_tank_level[3]);
 
 endmodule
