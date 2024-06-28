@@ -1,10 +1,12 @@
-module frequency_divider(input clk_224hz, output clk_28hz, output sprinkler_clk, output drip_clk, output fill_clk, output clk_1hz);
+module frequency_divider(input clk_896hz, output aux1, output sprinkler_clk, output drip_clk, output fill_clk, output clk_1hz);
 
 
 
 
 //clock do gerador de função --> clk_28hz
 
+t_flip_flop(1, clk_896hz, 0,, clk_448hz);
+t_flip_flop(1, clk_448hz, 0,, clk_224hz);
 t_flip_flop(1, clk_224hz, 0,, clk_112hz);
 t_flip_flop(1, clk_112hz, 0,, clk_56hz);
 t_flip_flop(1, clk_56hz, 0,, clk_28hz);

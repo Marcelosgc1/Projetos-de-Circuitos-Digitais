@@ -13,25 +13,24 @@ assign estado_atual[2] = state[1];
 assign estado_atual[3] = 1;
 
 //codifica valvula
-and(valvula[0], state[0], state[1]);
-nand(valvula[1], state[0], state[1]);
+and(valvula[0], !state[0], state[1]);
+or(valvula[1], state[0], !state[1]);
 or(valvula[2], state[0], state[1]);
-nand(valvula[3], state[0], state[1]);
+or(valvula[3], state[0], !state[1]);
 
 
 
 //Criando Seletor
-contador_sincrono_4(clk, seletor);
-
+counter_3_0(clk,,,, seletor);
 //Seleciona
 mux16_4(estado_atual, valvula, Ds, Us, seletor, bits_atuais);
 
 
 //SAIDA
-nor(digit[0], seletor[0], seletor[1]);
-and(digit[1], seletor[0], !seletor[1]);
-and(digit[2], !seletor[0], seletor[1]);
-and(digit[3], seletor[0], seletor[1]);
+or(digit[0], seletor[0], seletor[1]);
+or(digit[1], !seletor[0], seletor[1]);
+or(digit[2], seletor[0], !seletor[1]);
+nand(digit[3], seletor[0], seletor[1]);
 
 decoder_7_seg(bits_atuais, seg);
 

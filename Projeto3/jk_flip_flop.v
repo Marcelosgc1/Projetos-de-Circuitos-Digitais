@@ -8,11 +8,11 @@ module jk_flip_flop
 );
 
 	always @ (posedge clk or posedge clear or posedge preset) begin
-		if (clear) begin
-			q <= 0;
-		end
-		else if (preset) begin
+		if (preset) begin
 			q <= 1;
+		end
+		else if (clear) begin
+			q <= 0;
 		end
 		else begin
 			case ({j,k})
