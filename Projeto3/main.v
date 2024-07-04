@@ -60,6 +60,7 @@ assign columns_status[4] = 1;
 	);
 
 	frequency_divider(
+  p,
 		clk_fg,
 		fast_but_visible_clk,
 		sprinkler_clk, 
