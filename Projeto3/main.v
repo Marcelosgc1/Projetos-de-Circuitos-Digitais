@@ -86,7 +86,7 @@ assign columns_status[4] = 1;
 	
 	display(clk_fg, states, DS, US, mostrador, digits);
 		
-	pesticide_verification(init_pulse, pesticide, clk_50mhz, states, alert_np, alert_on);
+	pesticide_verification(init_pulse, !pesticide, clk_50mhz, states, alert_np, alert_on);
 //a
 	
 	

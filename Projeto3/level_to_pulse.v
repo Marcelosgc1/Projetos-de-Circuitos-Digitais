@@ -21,7 +21,7 @@ or(pulse, aux0, aux1);
 
 xor(aux0, q0, state[0]);
 
-xor(aux1, q1, state[1]);
+and(aux1, q1, !state[1]);
 
 
 
