@@ -12,7 +12,7 @@ and(timer[1], !state[1], state[0]);
 
 // Bit 0
 nor(aux0, state[1], state[0]);
-and(aux1, state[1], irrigation_type[1], irrigation_type[0]);
+and(aux1, !state[1], irrigation_type[1]);
 or(timer[0], aux0, aux1);
 
 
