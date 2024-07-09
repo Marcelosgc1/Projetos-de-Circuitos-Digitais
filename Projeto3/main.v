@@ -15,13 +15,14 @@ module main
 	output		[6:0]mostrador,
 	output		[3:0]digits,
 	output wire [6:0] rows_status,
-	output wire [4:0] columns_status,
-	output		[3:0]DS,
-	output 		[3:0]US
+	output wire [4:0] columns_status
 
 );
 
 //any wires needed
+wire		[3:0]DS;
+wire 		[3:0]US;
+
 wire [13:0]lines;
 wire [1:0]states;
 wire [1:0]type_of_irrigation_state;
@@ -42,7 +43,7 @@ assign columns_status[4] = 1;
 	
 	
 	
-	circuit_state(clk_50mhz, init_pulse, {lines[12], lines[10], lines[5], lines[1]}, type_of_irrigation_state, states);
+	circuit_state(clk_fg, init_pulse, {lines[12], lines[10], lines[5], lines[1]}, type_of_irrigation_state, states);
 	
 	level_to_pulse(clk_50mhz, states, pulse_transiction);
 	
