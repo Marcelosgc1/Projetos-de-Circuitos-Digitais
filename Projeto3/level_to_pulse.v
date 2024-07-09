@@ -8,8 +8,6 @@ module level_to_pulse(input clk, input [1:0]state, output pulse);
 
 
 
-d_flip_flop(pulse, clk, qc);
-
 d_flip_flop(state[1], clk, q1);
 
 d_flip_flop(state[0], clk, q0);
