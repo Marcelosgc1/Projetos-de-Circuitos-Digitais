@@ -49,7 +49,7 @@ assign columns_status[4] = 1;
 	
 	or(p,pulse_transiction,init_pulse);
 
-	timer(clk_1hz, states, type_of_irrigation_state, p, init_pulse, DS[1:0], US, clean_done);
+	timer(clk_1hz, states, type_of_irrigation_state, p, init_pulse, DS[1:0], US, clock_off);
 	
 	
 	irrigation_state(
@@ -70,7 +70,7 @@ assign columns_status[4] = 1;
 		clk_1hz
 	);
 	
-	
+	and(clean_done, clock_off, !pulse_transiction);
 	
 	lines_control(
 		init_pulse,
@@ -88,7 +88,7 @@ assign columns_status[4] = 1;
 	
 	display(clk_fg, states, DS, US, mostrador, digits);
 		
-	pesticide_verification(init_pulse, !pesticide, clk_50mhz, states, alert_np, alert_on);
+	pesticide_verification(init_pulse, pesticide, clk_50mhz, states, alert_np, alert_on);
 //a
 	
 	
