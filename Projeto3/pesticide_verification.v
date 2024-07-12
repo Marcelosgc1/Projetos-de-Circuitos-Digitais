@@ -8,7 +8,7 @@ module pesticide_verification(input init, input button, input clk, input [1:0]st
 
 //mostra vermelho/amarelo quando nn puder adicionar agrotoxico!!
 or(not_possible, !state[0], state[1], alert_on);
-and(alert_np, button, not_possible);
+and(alert_np, !button, not_possible);
 
 
 
