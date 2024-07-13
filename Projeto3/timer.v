@@ -4,15 +4,19 @@ wire [2:0]timer_needed;
 
 wire [1:0]psDS;
 wire [1:0]psUS;
-
+wire [1:0]clDS;
+wire [1:0]clUS;
 
 
 
 encoder_timer(state, irrigation_type, timer_needed);
-presets(timer_needed, pulse_transiction, psDS, psUS);
+presets(timer_needed, pulse_transiction, psDS, psUS, clDS, clUS);
 
-counter_9_0(clk_on, init_pulse, psUS, US);
-counter_3_0(clk_on, init_pulse, psDS, DS);
+counter_9_0(clk_on, init_pulse, psUS, clUS, US);
+
+and(flag_seconds, US[3],!US[2],!US[1],US[0]);
+
+counter_3_0(flag_seconds, init_pulse, psDS, clDS, DS);
 
 
 and(clk_on, clk, clk_enb);

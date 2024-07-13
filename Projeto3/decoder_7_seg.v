@@ -7,7 +7,7 @@ and(aux1, b[3], b[2], b[1]);
 and(aux2, !b[3], !b[2], !b[1], b[0]);
 and(aux3, !b[3], b[2], !b[1], !b[0]);
 or(segments[0], aux0, aux1, aux2, aux3);
-	
+
 
 //seg B 11
 and(aux4, b[3], b[2]);
@@ -43,17 +43,18 @@ or(segments[4], aux16, aux17, aux18, aux19);
 
 
 //seg F 11
-and(aux20, !b[3], b[0]);
+and(aux20, !b[3], !b[2], b[0]);
 and(aux21, !b[3], !b[2], b[1]);
-and(aux22, b[3], b[2], b[1]);
-or(segments[5], aux20, aux21, aux22);
+and(aux22, !b[3], b[1], b[0]);
+and(aux23, b[3], b[2], b[1]);
+or(segments[5], aux20, aux21, aux22, aux23);
 
 
 //seg G
-and(aux23, !b[3], !b[2], !b[1]);
-and(aux24, b[3], b[2], !b[1]);
-and(aux25, b[2], b[1], b[0]);
-or(segments[6], aux23, aux24, aux25);
+and(aux24, !b[3], !b[2], !b[1]);
+and(aux25, b[3], b[2], !b[1]);
+and(aux26, b[2], b[1], b[0]);
+or(segments[6], aux24, aux25, aux26);
 
 
 

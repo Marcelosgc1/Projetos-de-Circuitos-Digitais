@@ -20,11 +20,12 @@ module main
 );
 
 //any wires needed
+wire		[3:0]DS;
+wire 		[3:0]US;
+
 wire [13:0]lines;
 wire [1:0]states;
 wire [1:0]type_of_irrigation_state;
-wire [3:0]DS;
-wire [3:0]US;
 assign DS[3] = 0;
 assign DS[2] = 0;
 // IN DEVELOPMENT!!
@@ -42,11 +43,13 @@ assign columns_status[4] = 1;
 	
 	
 	
-	circuit_state(clk_50mhz, init_pulse, {lines[12], lines[10], lines[5], lines[1]}, type_of_irrigation_state, states);
+	circuit_state(clk_fg, init_pulse, {lines[12], lines[10], lines[5], lines[1]}, type_of_irrigation_state, states);
 	
-	state_transiction(clk_50mhz, states, pulse_transiction);
+	level_to_pulse(clk_50mhz, states, pulse_transiction);
 	
-	timer(clk_1hz, states, type_of_irrigation_state, pulse_transiction, init_pulse, DS[1:0], US, clean_done);
+	or(p,pulse_transiction,init_pulse);
+
+	timer(clk_1hz, states, type_of_irrigation_state, p, init_pulse, DS[1:0], US, clock_off);
 	
 	
 	irrigation_state(
@@ -58,6 +61,7 @@ assign columns_status[4] = 1;
 	);
 
 	frequency_divider(
+		p,
 		clk_fg,
 		fast_but_visible_clk,
 		sprinkler_clk, 
@@ -66,7 +70,7 @@ assign columns_status[4] = 1;
 		clk_1hz
 	);
 	
-	
+	and(clean_done, clock_off, !pulse_transiction);
 	
 	lines_control(
 		init_pulse,
